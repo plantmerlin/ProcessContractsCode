@@ -1,0 +1,14 @@
+{
+  "acr_version": "1.0",
+  "run_id": "2026-08-24T192513Z_hanoi3_13ff6044c0c82e1829f86d5330e85ab5",
+  "artefact_id": "ba7359ae5bf662128e9b5c5f36efec43480b0a9cc9eb8dc58d7f827bb6a76618",
+  "artefact_version": "1.0.0",
+  "verdict": "conforms",
+  "trace_integrity": "pass",
+  "process_conformance": "pass",
+  "misalignments": [],
+  "completeness": {
+    "result": "full"
+  },
+  "checked_at": 1787599790.874538
+}

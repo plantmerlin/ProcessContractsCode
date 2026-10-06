@@ -1,0 +1,48 @@
+{
+ "spec": "count_islands",
+ "filename": "solution.py",
+ "prompt": "Count islands. `solve(grid)` takes a rectangular grid (a list of lists) of 0s and 1s and returns the number of islands. An island is a group of 1s connected horizontally or vertically. Cells that touch only diagonally are NOT connected.",
+ "test_input": [
+  [
+   1,
+   1,
+   0,
+   0,
+   1,
+   0
+  ],
+  [
+   1,
+   0,
+   0,
+   1,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   1,
+   1,
+   0,
+   1
+  ],
+  [
+   0,
+   1,
+   0,
+   0,
+   0,
+   1
+  ],
+  [
+   1,
+   1,
+   0,
+   1,
+   0,
+   0
+  ]
+ ],
+ "expected_output": 6
+}

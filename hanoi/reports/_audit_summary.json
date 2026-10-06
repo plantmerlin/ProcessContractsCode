@@ -1,0 +1,373 @@
+{
+  "contract": {
+    "artefact_id": "ba7359ae5bf662128e9b5c5f36efec43480b0a9cc9eb8dc58d7f827bb6a76618",
+    "version": "1.0.0",
+    "content_hash": "0a43d181271fe80167993e3ef775106348e9ace8ad3513d6fbd6209ff2cc8162",
+    "seed_run": "2026-08-24T192151Z_hanoi3_3cb6a0f11cd0581b442711f1df0a16f2"
+  },
+  "by_arm": {
+    "undirected": {
+      "n": 12,
+      "conform": 2,
+      "interventions": 0,
+      "blocked": 62
+    },
+    "enforced": {
+      "n": 10,
+      "conform": 10,
+      "interventions": 74,
+      "blocked": 0
+    }
+  },
+  "runs": [
+    {
+      "run": "b07a",
+      "run_id": "2026-08-24T191808Z_hanoi3_16221853524bc9533ed77f5c9ca6b07a",
+      "direction": "undirected",
+      "events": 8,
+      "blocked": 0,
+      "interventions": 0,
+      "verdict": "violations",
+      "n_misalignments": 2,
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "classes": [
+        "STRUCTURAL"
+      ],
+      "is_seed": false
+    },
+    {
+      "run": "ac0a",
+      "run_id": "2026-08-24T191826Z_hanoi3_371183a319a230951b0378a269f5ac0a",
+      "direction": "undirected",
+      "events": 16,
+      "blocked": 5,
+      "interventions": 0,
+      "verdict": "violations",
+      "n_misalignments": 11,
+      "families": [
+        "PROCESS_CONFORMANCE",
+        "TRACE_INTEGRITY"
+      ],
+      "classes": [
+        "STRUCTURAL",
+        "UNMEDIATED"
+      ],
+      "is_seed": false
+    },
+    {
+      "run": "072b",
+      "run_id": "2026-08-24T191842Z_hanoi3_097467033c3692492930065a58dd072b",
+      "direction": "undirected",
+      "events": 17,
+      "blocked": 4,
+      "interventions": 0,
+      "verdict": "violations",
+      "n_misalignments": 14,
+      "families": [
+        "PROCESS_CONFORMANCE",
+        "TRACE_INTEGRITY"
+      ],
+      "classes": [
+        "GUARD_PRE",
+        "STRUCTURAL",
+        "UNMEDIATED"
+      ],
+      "is_seed": false
+    },
+    {
+      "run": "753b",
+      "run_id": "2026-08-24T191854Z_hanoi3_832066dbf0641410a8c19bd93a27753b",
+      "direction": "undirected",
+      "events": 11,
+      "blocked": 3,
+      "interventions": 0,
+      "verdict": "violations",
+      "n_misalignments": 6,
+      "families": [
+        "PROCESS_CONFORMANCE",
+        "TRACE_INTEGRITY"
+      ],
+      "classes": [
+        "STRUCTURAL",
+        "UNMEDIATED"
+      ],
+      "is_seed": false
+    },
+    {
+      "run": "7981",
+      "run_id": "2026-08-24T192022Z_hanoi3_7240c6f8ac686dbbd60c7a2962887981",
+      "direction": "undirected",
+      "events": 40,
+      "blocked": 18,
+      "interventions": 0,
+      "verdict": "violations",
+      "n_misalignments": 42,
+      "families": [
+        "PROCESS_CONFORMANCE",
+        "TRACE_INTEGRITY"
+      ],
+      "classes": [
+        "GUARD_PRE",
+        "STRUCTURAL",
+        "UNMEDIATED"
+      ],
+      "is_seed": false
+    },
+    {
+      "run": "5116",
+      "run_id": "2026-08-24T192038Z_hanoi3_c81eb9d9a261ab4406e7b9f3499b5116",
+      "direction": "undirected",
+      "events": 9,
+      "blocked": 1,
+      "interventions": 0,
+      "verdict": "violations",
+      "n_misalignments": 2,
+      "families": [
+        "PROCESS_CONFORMANCE",
+        "TRACE_INTEGRITY"
+      ],
+      "classes": [
+        "STRUCTURAL",
+        "UNMEDIATED"
+      ],
+      "is_seed": false
+    },
+    {
+      "run": "7a30",
+      "run_id": "2026-08-24T192137Z_hanoi3_15af4c1059878eccf999ad8d40337a30",
+      "direction": "undirected",
+      "events": 16,
+      "blocked": 4,
+      "interventions": 0,
+      "verdict": "violations",
+      "n_misalignments": 9,
+      "families": [
+        "PROCESS_CONFORMANCE",
+        "TRACE_INTEGRITY"
+      ],
+      "classes": [
+        "GUARD_PRE",
+        "STRUCTURAL",
+        "UNMEDIATED"
+      ],
+      "is_seed": false
+    },
+    {
+      "run": "d6db",
+      "run_id": "2026-08-24T192145Z_hanoi3_587229e5c91ad5f40c8c3eefb72bd6db",
+      "direction": "undirected",
+      "events": 8,
+      "blocked": 0,
+      "interventions": 0,
+      "verdict": "conforms",
+      "n_misalignments": 0,
+      "families": [],
+      "classes": [],
+      "is_seed": false
+    },
+    {
+      "run": "16f2",
+      "run_id": "2026-08-24T192151Z_hanoi3_3cb6a0f11cd0581b442711f1df0a16f2",
+      "direction": "undirected",
+      "events": 8,
+      "blocked": 0,
+      "interventions": 0,
+      "verdict": "conforms",
+      "n_misalignments": 0,
+      "families": [],
+      "classes": [],
+      "is_seed": true
+    },
+    {
+      "run": "a52d",
+      "run_id": "2026-08-24T192210Z_hanoi3_9b2e461b5fb361efde58085729daa52d",
+      "direction": "undirected",
+      "events": 26,
+      "blocked": 9,
+      "interventions": 0,
+      "verdict": "violations",
+      "n_misalignments": 24,
+      "families": [
+        "PROCESS_CONFORMANCE",
+        "TRACE_INTEGRITY"
+      ],
+      "classes": [
+        "GUARD_PRE",
+        "STRUCTURAL",
+        "UNMEDIATED"
+      ],
+      "is_seed": false
+    },
+    {
+      "run": "4f3b",
+      "run_id": "2026-08-24T192234Z_hanoi3_ab82614d2a9b05cf12079362a7be4f3b",
+      "direction": "undirected",
+      "events": 17,
+      "blocked": 6,
+      "interventions": 0,
+      "verdict": "violations",
+      "n_misalignments": 15,
+      "families": [
+        "PROCESS_CONFORMANCE",
+        "TRACE_INTEGRITY"
+      ],
+      "classes": [
+        "GUARD_PRE",
+        "STRUCTURAL",
+        "UNMEDIATED"
+      ],
+      "is_seed": false
+    },
+    {
+      "run": "cdf9",
+      "run_id": "2026-08-24T192337Z_hanoi3_fd635189862875d144074d879cc4cdf9",
+      "direction": "undirected",
+      "events": 28,
+      "blocked": 12,
+      "interventions": 0,
+      "verdict": "violations",
+      "n_misalignments": 30,
+      "families": [
+        "PROCESS_CONFORMANCE",
+        "TRACE_INTEGRITY"
+      ],
+      "classes": [
+        "STRUCTURAL",
+        "UNMEDIATED"
+      ],
+      "is_seed": false
+    },
+    {
+      "run": "c0c1",
+      "run_id": "2026-08-24T192416Z_hanoi3_a93ca90d4743e4e1e1027e20abbbc0c1",
+      "direction": "enforced",
+      "events": 8,
+      "blocked": 0,
+      "interventions": 2,
+      "verdict": "conforms",
+      "n_misalignments": 0,
+      "families": [],
+      "classes": [],
+      "is_seed": false
+    },
+    {
+      "run": "2bd4",
+      "run_id": "2026-08-24T192427Z_hanoi3_108590d05dc99da69c79a903882d2bd4",
+      "direction": "enforced",
+      "events": 8,
+      "blocked": 0,
+      "interventions": 8,
+      "verdict": "conforms",
+      "n_misalignments": 0,
+      "families": [],
+      "classes": [],
+      "is_seed": false
+    },
+    {
+      "run": "e031",
+      "run_id": "2026-08-24T192436Z_hanoi3_b9b7f70263552d532afe66a972ece031",
+      "direction": "enforced",
+      "events": 8,
+      "blocked": 0,
+      "interventions": 2,
+      "verdict": "conforms",
+      "n_misalignments": 0,
+      "families": [],
+      "classes": [],
+      "is_seed": false
+    },
+    {
+      "run": "2549",
+      "run_id": "2026-08-24T192446Z_hanoi3_25ce8151e4917501322e099f3a4c2549",
+      "direction": "enforced",
+      "events": 8,
+      "blocked": 0,
+      "interventions": 6,
+      "verdict": "conforms",
+      "n_misalignments": 0,
+      "families": [],
+      "classes": [],
+      "is_seed": false
+    },
+    {
+      "run": "5ab5",
+      "run_id": "2026-08-24T192513Z_hanoi3_13ff6044c0c82e1829f86d5330e85ab5",
+      "direction": "enforced",
+      "events": 8,
+      "blocked": 0,
+      "interventions": 10,
+      "verdict": "conforms",
+      "n_misalignments": 0,
+      "families": [],
+      "classes": [],
+      "is_seed": false
+    },
+    {
+      "run": "51c8",
+      "run_id": "2026-08-24T192520Z_hanoi3_69db3913346c0a6b0383241ef24551c8",
+      "direction": "enforced",
+      "events": 8,
+      "blocked": 0,
+      "interventions": 0,
+      "verdict": "conforms",
+      "n_misalignments": 0,
+      "families": [],
+      "classes": [],
+      "is_seed": false
+    },
+    {
+      "run": "06a4",
+      "run_id": "2026-08-24T192635Z_hanoi3_b4af28254040acc4cdb0a880fec606a4",
+      "direction": "enforced",
+      "events": 8,
+      "blocked": 0,
+      "interventions": 21,
+      "verdict": "conforms",
+      "n_misalignments": 0,
+      "families": [],
+      "classes": [],
+      "is_seed": false
+    },
+    {
+      "run": "ba62",
+      "run_id": "2026-08-24T192703Z_hanoi3_37ba6fe1e4af9efa2e2c83ec70eaba62",
+      "direction": "enforced",
+      "events": 8,
+      "blocked": 0,
+      "interventions": 11,
+      "verdict": "conforms",
+      "n_misalignments": 0,
+      "families": [],
+      "classes": [],
+      "is_seed": false
+    },
+    {
+      "run": "9916",
+      "run_id": "2026-08-24T192729Z_hanoi3_9d710efd5a3744d6c1f025e32ca39916",
+      "direction": "enforced",
+      "events": 8,
+      "blocked": 0,
+      "interventions": 14,
+      "verdict": "conforms",
+      "n_misalignments": 0,
+      "families": [],
+      "classes": [],
+      "is_seed": false
+    },
+    {
+      "run": "ac49",
+      "run_id": "2026-08-24T192737Z_hanoi3_54dfcebceeac6a8ff48f2c841cabac49",
+      "direction": "enforced",
+      "events": 8,
+      "blocked": 0,
+      "interventions": 0,
+      "verdict": "conforms",
+      "n_misalignments": 0,
+      "families": [],
+      "classes": [],
+      "is_seed": false
+    }
+  ]
+}

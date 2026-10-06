@@ -1,0 +1,7 @@
+{
+ "spec": "run_length_encoding",
+ "filename": "solution.py",
+ "prompt": "Implement run-length encoding. `solve(s)` takes a string and returns a string in which each run of a repeated character is replaced by the character followed by the length of the run. For example 'aab' becomes 'a2b1'.",
+ "test_input": "aaabccddddde",
+ "expected_output": "a3b1c2d5e1"
+}

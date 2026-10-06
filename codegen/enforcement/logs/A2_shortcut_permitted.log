@@ -1,0 +1,8 @@
+CODEGEN | spec=fizzbuzz | gpt-4o | parallel_tool_calls=False | prompt=shortcut_allowed | refusal=permitted | ENFORCED vs 50bfde761acc/ea20f7eef09c
+[00] completed  ev= 5 rej= 0 iv= 1 test=PASS exit=Y   9.8s 990d  [create write execute verify report]  <- SEED CANDIDATE
+[01] completed  ev= 5 rej= 0 iv= 1 test=PASS exit=Y   8.8s 1837  [create write execute verify report]  <- SEED CANDIDATE
+[02] completed  ev= 5 rej= 0 iv= 1 test=PASS exit=Y   9.5s ab6e  [create write execute verify report]  <- SEED CANDIDATE
+CODEGEN | spec=count_islands | gpt-4o | parallel_tool_calls=False | prompt=shortcut_allowed | refusal=permitted | ENFORCED vs 50bfde761acc/ea20f7eef09c
+[00] completed  ev= 5 rej= 0 iv= 1 test=PASS exit=Y  14.4s 6d3c  [create write execute verify report]  <- SEED CANDIDATE
+[01] completed  ev= 5 rej= 0 iv= 1 test=PASS exit=Y   8.9s f782  [create write execute verify report]  <- SEED CANDIDATE
+[02] completed  ev= 5 rej= 0 iv= 1 test=PASS exit=Y   9.9s 87aa  [create write execute verify report]  <- SEED CANDIDATE

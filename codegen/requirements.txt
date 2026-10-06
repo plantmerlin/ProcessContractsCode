@@ -1,0 +1,7 @@
+# Exact versions that produced the stored data (Python 3.14.5).
+# Only openai-agents/openai are needed for live runs; audits, failure
+# cases, induction and the regression suite need jsonschema + referencing.
+openai-agents==0.17.7
+openai==2.44.0
+jsonschema==4.26.0
+referencing==0.37.0

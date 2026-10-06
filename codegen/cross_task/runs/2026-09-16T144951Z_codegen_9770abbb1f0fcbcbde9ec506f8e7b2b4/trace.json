@@ -1,0 +1,384 @@
+{
+  "atf_version": "1.0",
+  "run_id": "2026-09-16T144951Z_codegen_9770abbb1f0fcbcbde9ec506f8e7b2b4",
+  "task": "codegen",
+  "artefact_ref": null,
+  "agent": {
+    "framework": "openai-agents",
+    "model": "gpt-4o"
+  },
+  "store_schema": {
+    "file_exists": "bool",
+    "source_written": "bool",
+    "executed": "bool",
+    "exit_ok": "bool",
+    "test_passed": "bool",
+    "verified": "bool"
+  },
+  "scope": {
+    "entry": "true",
+    "exit_guard": "verified /\\ test_passed"
+  },
+  "provenance_default": "runtime_observed",
+  "started_at": 1789570182.734524,
+  "harness": "codegen-v1",
+  "direction": "undirected",
+  "unapplied_events_recorded": true,
+  "adapter_version": "codegen/1.0.0",
+  "parallel_tool_calls": false,
+  "spec": {
+    "spec": "order_totals",
+    "filename": "solution.py",
+    "prompt": "Total customer spending. `solve(orders)` takes a list of order records, each an object with keys customer, item, qty, unit_cents and status. Return an object mapping each customer to the total of qty * unit_cents over their orders, ignoring any order whose status is \"cancelled\". A customer whose orders are all cancelled does not appear in the result.",
+    "test_input": [
+      {
+        "customer": "ana",
+        "item": "pen",
+        "qty": 3,
+        "unit_cents": 150,
+        "status": "paid"
+      },
+      {
+        "customer": "ben",
+        "item": "book",
+        "qty": 1,
+        "unit_cents": 1299,
+        "status": "paid"
+      },
+      {
+        "customer": "ana",
+        "item": "paper",
+        "qty": 2,
+        "unit_cents": 499,
+        "status": "cancelled"
+      },
+      {
+        "customer": "cara",
+        "item": "pen",
+        "qty": 10,
+        "unit_cents": 150,
+        "status": "paid"
+      },
+      {
+        "customer": "ben",
+        "item": "ink",
+        "qty": 2,
+        "unit_cents": 725,
+        "status": "pending"
+      },
+      {
+        "customer": "ana",
+        "item": "book",
+        "qty": 1,
+        "unit_cents": 1299,
+        "status": "paid"
+      },
+      {
+        "customer": "dev",
+        "item": "pen",
+        "qty": 5,
+        "unit_cents": 150,
+        "status": "cancelled"
+      }
+    ],
+    "expected_output": {
+      "ana": 1749,
+      "ben": 2749,
+      "cara": 1500
+    }
+  },
+  "agent_instructions": "You are writing and testing a small Python program.\n\nTASK: Total customer spending. `solve(orders)` takes a list of order records, each an object with keys customer, item, qty, unit_cents and status. Return an object mapping each customer to the total of qty * unit_cents over their orders, ignoring any order whose status is \"cancelled\". A customer whose orders are all cancelled does not appear in the result.\n\nWrite a function named `solve` in the file `solution.py`. It receives the test input as its only argument and must return the result. Write only the function (and any helpers it needs); the harness supplies the input and captures what it returns.\n\nAvailable operations:\n  create_file      create the file\n  write_source     write Python source into the file\n  execute_program  run the program on the test input\n  verify_result    check the program's result against the expected output\n  report           say that you have finished\n\nCall report when you have finished.",
+  "agent_final_output": "The solution is complete and has passed all tests. If you need anything else, feel free to ask!",
+  "runner_outcome": "completed",
+  "determinism_ok": true,
+  "wall_seconds": 9.6,
+  "events": [
+    {
+      "seq": 0,
+      "layer": "SYS",
+      "type": "action",
+      "action": "create_file",
+      "args": {
+        "filename": "solution.py"
+      },
+      "pre": {
+        "file_exists": false,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789570182.734524
+    },
+    {
+      "seq": 1,
+      "layer": "SYS",
+      "type": "action",
+      "action": "write_source",
+      "args": {
+        "chars": 410
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789570184.7019444
+    },
+    {
+      "seq": 2,
+      "layer": "SYS",
+      "type": "action",
+      "action": "execute_program",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789570186.2506847
+    },
+    {
+      "seq": 3,
+      "layer": "SYS",
+      "type": "action",
+      "action": "verify_result",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789570188.7609746
+    },
+    {
+      "seq": 4,
+      "layer": "SYS",
+      "type": "report",
+      "action": "report",
+      "args": {
+        "note": "The solution is implemented and tested successfully."
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789570189.9797564
+    }
+  ],
+  "operation_ledger": [
+    {
+      "operation_seq": 0,
+      "kind": "create_file",
+      "cell": "create_file",
+      "args": {
+        "filename": "solution.py"
+      },
+      "pre": {
+        "file_exists": false,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789570182.7328517,
+      "post": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 1,
+      "kind": "write_source",
+      "cell": "write_source",
+      "args": {
+        "chars": 410
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789570184.6992147,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 2,
+      "kind": "execute_program",
+      "cell": "execute_program",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789570186.106144,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 3,
+      "kind": "verify_result",
+      "cell": "verify_result",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789570188.7609613,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 4,
+      "kind": "report",
+      "cell": "report",
+      "args": {
+        "note": "The solution is implemented and tested successfully."
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "executed": true,
+      "observed_at": 1789570189.9797497,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "outcome": "executed"
+    }
+  ],
+  "interventions": [],
+  "final_state": {
+    "file_exists": true,
+    "source_written": true,
+    "executed": true,
+    "exit_ok": true,
+    "test_passed": true,
+    "verified": true
+  },
+  "final_source": "def solve(orders):\n    customer_totals = {}\n    for order in orders:\n        if order['status'] != 'cancelled':\n            customer = order['customer']\n            total = order['qty'] * order['unit_cents']\n            \n            if customer in customer_totals:\n                customer_totals[customer] += total\n            else:\n                customer_totals[customer] = total\n    return customer_totals",
+  "final_stdout": "{\"ana\": 1749, \"ben\": 2749, \"cara\": 1500}\n",
+  "final_stderr": "",
+  "env_stats": {
+    "applied": 5,
+    "rejected_by_world": 0,
+    "interventions": 0,
+    "attempted_operations": 5
+  }
+}

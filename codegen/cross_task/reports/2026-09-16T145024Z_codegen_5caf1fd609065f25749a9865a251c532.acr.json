@@ -1,0 +1,14 @@
+{
+  "acr_version": "1.0",
+  "run_id": "2026-09-16T145024Z_codegen_5caf1fd609065f25749a9865a251c532",
+  "artefact_id": "50bfde761acc5ece8c8e4f65a2838419f3a9e312bddb56916e3df9fffbfec178",
+  "artefact_version": "1.0.0",
+  "verdict": "conforms",
+  "trace_integrity": "pass",
+  "process_conformance": "pass",
+  "misalignments": [],
+  "completeness": {
+    "result": "full"
+  },
+  "checked_at": 1791293108.2986443
+}

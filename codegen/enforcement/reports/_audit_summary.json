@@ -1,0 +1,1281 @@
+{
+  "contract": {
+    "artefact_id": "50bfde761acc5ece8c8e4f65a2838419f3a9e312bddb56916e3df9fffbfec178",
+    "content_hash": "ea20f7eef09c4cd56fcf29233ef2df8f705641476f6320c8992a2acb7b101ace",
+    "version": "1.0.0",
+    "seed_run": "2026-09-16T142914Z_codegen_57e473a2488898277dc7d673c7910c81"
+  },
+  "summary": [
+    {
+      "spec": "fizzbuzz",
+      "arm": "undirected",
+      "n": 3,
+      "conform": 0,
+      "test_passed": 3,
+      "passed_but_nonconforming": 3,
+      "interventions": 0,
+      "rejected_by_world": 0
+    },
+    {
+      "spec": "fizzbuzz",
+      "arm": "enforced",
+      "n": 6,
+      "conform": 3,
+      "test_passed": 6,
+      "passed_but_nonconforming": 3,
+      "interventions": 6,
+      "rejected_by_world": 0
+    },
+    {
+      "spec": "count_islands",
+      "arm": "undirected",
+      "n": 3,
+      "conform": 0,
+      "test_passed": 3,
+      "passed_but_nonconforming": 3,
+      "interventions": 0,
+      "rejected_by_world": 0
+    },
+    {
+      "spec": "count_islands",
+      "arm": "enforced",
+      "n": 6,
+      "conform": 3,
+      "test_passed": 6,
+      "passed_but_nonconforming": 3,
+      "interventions": 6,
+      "rejected_by_world": 0
+    },
+    {
+      "spec": "round_half_away",
+      "arm": "undirected",
+      "n": 5,
+      "conform": 4,
+      "test_passed": 4,
+      "passed_but_nonconforming": 0,
+      "interventions": 0,
+      "rejected_by_world": 0
+    },
+    {
+      "spec": "round_half_away",
+      "arm": "enforced",
+      "n": 5,
+      "conform": 5,
+      "test_passed": 5,
+      "passed_but_nonconforming": 0,
+      "interventions": 0,
+      "rejected_by_world": 0
+    },
+    {
+      "spec": "title_case_small_words",
+      "arm": "undirected",
+      "n": 5,
+      "conform": 4,
+      "test_passed": 5,
+      "passed_but_nonconforming": 1,
+      "interventions": 0,
+      "rejected_by_world": 0
+    },
+    {
+      "spec": "title_case_small_words",
+      "arm": "enforced",
+      "n": 10,
+      "conform": 10,
+      "test_passed": 10,
+      "passed_but_nonconforming": 0,
+      "interventions": 0,
+      "rejected_by_world": 0
+    }
+  ],
+  "runs": [
+    {
+      "run": "f191",
+      "run_id": "2026-09-16T190604Z_codegen_40118a92bf139bc13687e4847c7af191",
+      "spec": "fizzbuzz",
+      "arm": "undirected",
+      "events": 4,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": false,
+      "reported": true,
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS",
+        "STRUCTURAL"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 9.3
+    },
+    {
+      "run": "49e6",
+      "run_id": "2026-09-16T190611Z_codegen_58eb5b6753767ba781b18ac39ee649e6",
+      "spec": "fizzbuzz",
+      "arm": "undirected",
+      "events": 4,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": false,
+      "reported": true,
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS",
+        "STRUCTURAL"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 6.6
+    },
+    {
+      "run": "1f02",
+      "run_id": "2026-09-16T190618Z_codegen_c25314bd330505a2a8e0cef54d9d1f02",
+      "spec": "fizzbuzz",
+      "arm": "undirected",
+      "events": 4,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": false,
+      "reported": true,
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS",
+        "STRUCTURAL"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 7.2
+    },
+    {
+      "run": "e46a",
+      "run_id": "2026-09-16T190636Z_codegen_32a9072f3ce263b07232e2452546e46a",
+      "spec": "fizzbuzz",
+      "arm": "enforced",
+      "events": 3,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 1,
+      "intervention_kinds": [
+        "STRUCTURAL"
+      ],
+      "test_passed": true,
+      "verified": false,
+      "reported": false,
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 8.9
+    },
+    {
+      "run": "f8ae",
+      "run_id": "2026-09-16T190642Z_codegen_d5cc1fb0de2dc07c36557ddce9b2f8ae",
+      "spec": "fizzbuzz",
+      "arm": "enforced",
+      "events": 3,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 1,
+      "intervention_kinds": [
+        "STRUCTURAL"
+      ],
+      "test_passed": true,
+      "verified": false,
+      "reported": false,
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 6.1
+    },
+    {
+      "run": "ac2c",
+      "run_id": "2026-09-16T190649Z_codegen_cb2bc4475496b9a5656e78572363ac2c",
+      "spec": "fizzbuzz",
+      "arm": "enforced",
+      "events": 3,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 1,
+      "intervention_kinds": [
+        "STRUCTURAL"
+      ],
+      "test_passed": true,
+      "verified": false,
+      "reported": false,
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 7.2
+    },
+    {
+      "run": "1dab",
+      "run_id": "2026-09-16T190712Z_codegen_d95838795a08cd95a357cf97833e1dab",
+      "spec": "count_islands",
+      "arm": "undirected",
+      "events": 4,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": false,
+      "reported": true,
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS",
+        "STRUCTURAL"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 13.7
+    },
+    {
+      "run": "a555",
+      "run_id": "2026-09-16T190719Z_codegen_48ee620f8d481eff17364ebeb593a555",
+      "spec": "count_islands",
+      "arm": "undirected",
+      "events": 4,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": false,
+      "reported": true,
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS",
+        "STRUCTURAL"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 7.2
+    },
+    {
+      "run": "7512",
+      "run_id": "2026-09-16T190727Z_codegen_577a67aa12ab357a78a60196cc917512",
+      "spec": "count_islands",
+      "arm": "undirected",
+      "events": 4,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": false,
+      "reported": true,
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS",
+        "STRUCTURAL"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 7.6
+    },
+    {
+      "run": "d9bd",
+      "run_id": "2026-09-16T190749Z_codegen_cf8db63364fcdbaf9d8736a31f89d9bd",
+      "spec": "count_islands",
+      "arm": "enforced",
+      "events": 3,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 1,
+      "intervention_kinds": [
+        "STRUCTURAL"
+      ],
+      "test_passed": true,
+      "verified": false,
+      "reported": false,
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 12.8
+    },
+    {
+      "run": "ba6f",
+      "run_id": "2026-09-16T190756Z_codegen_9410970bd0a5fc602071d26bd640ba6f",
+      "spec": "count_islands",
+      "arm": "enforced",
+      "events": 3,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 1,
+      "intervention_kinds": [
+        "STRUCTURAL"
+      ],
+      "test_passed": true,
+      "verified": false,
+      "reported": false,
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 7.8
+    },
+    {
+      "run": "0690",
+      "run_id": "2026-09-16T190806Z_codegen_bc074e852e8aac20ebac167cf8ab0690",
+      "spec": "count_islands",
+      "arm": "enforced",
+      "events": 3,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 1,
+      "intervention_kinds": [
+        "STRUCTURAL"
+      ],
+      "test_passed": true,
+      "verified": false,
+      "reported": false,
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 9.2
+    },
+    {
+      "run": "caa1",
+      "run_id": "2026-09-16T191050Z_codegen_f3f76a16f542daa62f441567e451caa1",
+      "spec": "round_half_away",
+      "arm": "undirected",
+      "events": 4,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": false,
+      "verified": true,
+      "reported": false,
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS",
+        "STRUCTURAL"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 11.7
+    },
+    {
+      "run": "b175",
+      "run_id": "2026-09-16T191059Z_codegen_0e127cfe4a7a2cc94e402daf89d8b175",
+      "spec": "round_half_away",
+      "arm": "undirected",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 8.4
+    },
+    {
+      "run": "1a76",
+      "run_id": "2026-09-16T191106Z_codegen_dfb927f8abddd35f4e39aff8a4c61a76",
+      "spec": "round_half_away",
+      "arm": "undirected",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 6.9
+    },
+    {
+      "run": "3620",
+      "run_id": "2026-09-16T191113Z_codegen_3757ab0dd1db66cdf7a25fc4f75f3620",
+      "spec": "round_half_away",
+      "arm": "undirected",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 7.4
+    },
+    {
+      "run": "ad98",
+      "run_id": "2026-09-16T191121Z_codegen_eefcdf2c6277c85e9e58fb1009dead98",
+      "spec": "round_half_away",
+      "arm": "undirected",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 8.0
+    },
+    {
+      "run": "93c9",
+      "run_id": "2026-09-16T191140Z_codegen_45e3a2219e8a2c3758bd815dcec793c9",
+      "spec": "round_half_away",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 11.2
+    },
+    {
+      "run": "30f8",
+      "run_id": "2026-09-16T191147Z_codegen_fff476c70f032b569b36fad0c65730f8",
+      "spec": "round_half_away",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 7.2
+    },
+    {
+      "run": "5cda",
+      "run_id": "2026-09-16T191157Z_codegen_c84a5f9973e47e6b2e31e928fab95cda",
+      "spec": "round_half_away",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 7.8
+    },
+    {
+      "run": "77ff",
+      "run_id": "2026-09-16T191212Z_codegen_7f65612d2ea30e391188c40c4aa677ff",
+      "spec": "round_half_away",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 14.7
+    },
+    {
+      "run": "f30b",
+      "run_id": "2026-09-16T191222Z_codegen_19c8fcb41eb801be3adf900fc82af30b",
+      "spec": "round_half_away",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 10.1
+    },
+    {
+      "run": "cec5",
+      "run_id": "2026-09-16T191245Z_codegen_59da8e2a25ec41af9217cebbc4bfcec5",
+      "spec": "title_case_small_words",
+      "arm": "undirected",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 10.5
+    },
+    {
+      "run": "d6f0",
+      "run_id": "2026-09-16T191259Z_codegen_23c8689787abf65da296b1a5df71d6f0",
+      "spec": "title_case_small_words",
+      "arm": "undirected",
+      "events": 8,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "violations",
+      "classes": [
+        "STRUCTURAL"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 14.5
+    },
+    {
+      "run": "eedd",
+      "run_id": "2026-09-16T191309Z_codegen_602a30d4dd81c4a28bcf90f57b4feedd",
+      "spec": "title_case_small_words",
+      "arm": "undirected",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 10.3
+    },
+    {
+      "run": "2dd2",
+      "run_id": "2026-09-16T191319Z_codegen_f9b10dc13f040a985900aee2c1eb2dd2",
+      "spec": "title_case_small_words",
+      "arm": "undirected",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 9.9
+    },
+    {
+      "run": "fa21",
+      "run_id": "2026-09-16T191329Z_codegen_32a0709e5799854baca47423149bfa21",
+      "spec": "title_case_small_words",
+      "arm": "undirected",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 9.6
+    },
+    {
+      "run": "143a",
+      "run_id": "2026-09-16T191352Z_codegen_1db19b4c6a7359463356463fdd45143a",
+      "spec": "title_case_small_words",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 12.6
+    },
+    {
+      "run": "119d",
+      "run_id": "2026-09-16T191400Z_codegen_5917ef898af344c04c54707b8729119d",
+      "spec": "title_case_small_words",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 7.2
+    },
+    {
+      "run": "2729",
+      "run_id": "2026-09-16T191412Z_codegen_6162f2aee74635aed09187f461f22729",
+      "spec": "title_case_small_words",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 12.3
+    },
+    {
+      "run": "9680",
+      "run_id": "2026-09-16T191421Z_codegen_2a186c8f21bccc40004f5c8e9fff9680",
+      "spec": "title_case_small_words",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 9.4
+    },
+    {
+      "run": "6d90",
+      "run_id": "2026-09-16T191429Z_codegen_3a9846ae30ec026bd6ce836646296d90",
+      "spec": "title_case_small_words",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 7.8
+    },
+    {
+      "run": "1c9d",
+      "run_id": "2026-09-16T191449Z_codegen_1db8bba46fd77d1b3d66918ef6281c9d",
+      "spec": "title_case_small_words",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 9.8
+    },
+    {
+      "run": "c965",
+      "run_id": "2026-09-16T191458Z_codegen_8a064ffcb8c929a7b5f18c411174c965",
+      "spec": "title_case_small_words",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 8.8
+    },
+    {
+      "run": "6cde",
+      "run_id": "2026-09-16T191504Z_codegen_0e6ab05c8bd66b593185604e788c6cde",
+      "spec": "title_case_small_words",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 6.5
+    },
+    {
+      "run": "ee93",
+      "run_id": "2026-09-16T191512Z_codegen_1162dead056245ee2e5e44463271ee93",
+      "spec": "title_case_small_words",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 8.2
+    },
+    {
+      "run": "d290",
+      "run_id": "2026-09-16T191521Z_codegen_3c9072964145212273950e855347d290",
+      "spec": "title_case_small_words",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 0,
+      "intervention_kinds": [],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 8.9
+    },
+    {
+      "run": "990d",
+      "run_id": "2026-09-16T191540Z_codegen_35a71f3e54f3293214c0da255387990d",
+      "spec": "fizzbuzz",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 1,
+      "intervention_kinds": [
+        "STRUCTURAL"
+      ],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 9.8
+    },
+    {
+      "run": "1837",
+      "run_id": "2026-09-16T191549Z_codegen_334428a81095bb2bc989c5948ab41837",
+      "spec": "fizzbuzz",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 1,
+      "intervention_kinds": [
+        "STRUCTURAL"
+      ],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 8.8
+    },
+    {
+      "run": "ab6e",
+      "run_id": "2026-09-16T191558Z_codegen_64d8c02236aa48d991b17d548faaab6e",
+      "spec": "fizzbuzz",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 1,
+      "intervention_kinds": [
+        "STRUCTURAL"
+      ],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 9.5
+    },
+    {
+      "run": "6d3c",
+      "run_id": "2026-09-16T191620Z_codegen_06b53b2f1aee3c2c30d43313d36f6d3c",
+      "spec": "count_islands",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 1,
+      "intervention_kinds": [
+        "STRUCTURAL"
+      ],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 14.4
+    },
+    {
+      "run": "f782",
+      "run_id": "2026-09-16T191629Z_codegen_cbc677724d2205bab1142323ebdaf782",
+      "spec": "count_islands",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 1,
+      "intervention_kinds": [
+        "STRUCTURAL"
+      ],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 8.9
+    },
+    {
+      "run": "87aa",
+      "run_id": "2026-09-16T191639Z_codegen_e3b144a9279730e3cb7ee50c72f587aa",
+      "spec": "count_islands",
+      "arm": "enforced",
+      "events": 5,
+      "sequence": [
+        "create_file",
+        "write_source",
+        "execute_program",
+        "verify_result",
+        "report"
+      ],
+      "rejected_by_world": 0,
+      "interventions": 1,
+      "intervention_kinds": [
+        "STRUCTURAL"
+      ],
+      "test_passed": true,
+      "verified": true,
+      "reported": true,
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "is_seed": false,
+      "runner_outcome": "completed",
+      "wall_seconds": 9.9
+    }
+  ]
+}

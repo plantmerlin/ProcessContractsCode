@@ -1,0 +1,93 @@
+{
+  "acr_version": "1.0",
+  "run_id": "FAILURECASE_structural",
+  "artefact_id": "ba7359ae5bf662128e9b5c5f36efec43480b0a9cc9eb8dc58d7f827bb6a76618",
+  "artefact_version": "1.0.0",
+  "verdict": "violations",
+  "trace_integrity": "pass",
+  "process_conformance": "fail",
+  "misalignments": [
+    {
+      "seq": 0,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_ab' occurred (not offered here)"
+    },
+    {
+      "seq": 2,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ab",
+      "observed": "'move_bc' occurred (not offered here)"
+    },
+    {
+      "seq": 4,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_cb",
+      "observed": "'move_ca' occurred (not offered here)"
+    },
+    {
+      "seq": 6,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_ab' occurred (not offered here)"
+    },
+    {
+      "seq": 7,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 8,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_bc' occurred (not offered here)"
+    },
+    {
+      "seq": 9,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_ba' occurred (not offered here)"
+    },
+    {
+      "seq": 10,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_ca' occurred (not offered here)"
+    },
+    {
+      "seq": 11,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 13,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ba",
+      "observed": "'report' occurred (not offered here)"
+    },
+    {
+      "seq": -1,
+      "class": "COMPLETENESS",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "termination with exit guard 'solved'",
+      "observed": "process not at SKIP"
+    }
+  ],
+  "completeness": {
+    "result": "partial",
+    "reason": "exit_guard_unsatisfied"
+  },
+  "checked_at": 1787599855.2623093
+}

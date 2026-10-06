@@ -1,0 +1,29 @@
+{
+  "acr_version": "1.0",
+  "run_id": "2026-09-16T191259Z_codegen_23c8689787abf65da296b1a5df71d6f0",
+  "artefact_id": "50bfde761acc5ece8c8e4f65a2838419f3a9e312bddb56916e3df9fffbfec178",
+  "artefact_version": "1.0.0",
+  "verdict": "violations",
+  "trace_integrity": "pass",
+  "process_conformance": "fail",
+  "misalignments": [
+    {
+      "seq": 3,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: execute_program",
+      "observed": "'verify_result' occurred (not offered here)"
+    },
+    {
+      "seq": 4,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: execute_program",
+      "observed": "'write_source' occurred (not offered here)"
+    }
+  ],
+  "completeness": {
+    "result": "full"
+  },
+  "checked_at": 1791293109.171585
+}

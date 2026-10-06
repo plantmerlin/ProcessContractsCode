@@ -1,0 +1,350 @@
+{
+  "atf_version": "1.0",
+  "run_id": "2026-09-16T143421Z_codegen_a2b3b98c4f638ad169e6aac2e5ad4eca",
+  "task": "codegen",
+  "artefact_ref": "50bfde761acc5ece8c8e4f65a2838419f3a9e312bddb56916e3df9fffbfec178@1.0.0",
+  "agent": {
+    "framework": "openai-agents",
+    "model": "gpt-4o"
+  },
+  "store_schema": {
+    "file_exists": "bool",
+    "source_written": "bool",
+    "executed": "bool",
+    "exit_ok": "bool",
+    "test_passed": "bool",
+    "verified": "bool"
+  },
+  "scope": {
+    "entry": "true",
+    "exit_guard": "verified /\\ test_passed"
+  },
+  "provenance_default": "runtime_observed",
+  "started_at": 1789569251.2510533,
+  "harness": "codegen-v1",
+  "direction": "enforced",
+  "unapplied_events_recorded": false,
+  "adapter_version": "codegen/1.0.0",
+  "parallel_tool_calls": false,
+  "spec": {
+    "spec": "bubble_sort",
+    "filename": "solution.py",
+    "prompt": "Implement bubble sort. `solve(xs)` takes a list of integers and returns a new list containing the same integers in ascending order, sorted using the bubble sort algorithm.",
+    "test_input": [
+      5,
+      3,
+      8,
+      1,
+      9,
+      2,
+      7,
+      4,
+      6
+    ],
+    "expected_output": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "agent_instructions": "You are writing and testing a small Python program.\n\nTASK: Implement bubble sort. `solve(xs)` takes a list of integers and returns a new list containing the same integers in ascending order, sorted using the bubble sort algorithm.\n\nWrite a function named `solve` in the file `solution.py`. It receives the test input as its only argument and must return the result. Write only the function (and any helpers it needs); the harness supplies the input and captures what it returns.\n\nAvailable operations:\n  create_file      create the file\n  write_source     write Python source into the file\n  execute_program  run the program on the test input\n  verify_result    check the program's result against the expected output\n  report           say that you have finished\n\nCall report when you have finished.\n\nNote: a runtime gate may refuse an operation. A refusal means nothing happened and that the operation is not the next step of the process. Adjust and continue.",
+  "agent_final_output": "The bubble sort implementation was successful. The program has been tested and verified. If you have any further questions or need assistance, feel free to ask!",
+  "runner_outcome": "completed",
+  "determinism_ok": true,
+  "wall_seconds": 11.3,
+  "events": [
+    {
+      "seq": 0,
+      "layer": "SYS",
+      "type": "action",
+      "action": "create_file",
+      "args": {
+        "filename": "solution.py"
+      },
+      "pre": {
+        "file_exists": false,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789569251.2510533
+    },
+    {
+      "seq": 1,
+      "layer": "SYS",
+      "type": "action",
+      "action": "write_source",
+      "args": {
+        "chars": 268
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789569254.4044251
+    },
+    {
+      "seq": 2,
+      "layer": "SYS",
+      "type": "action",
+      "action": "execute_program",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789569256.7105954
+    },
+    {
+      "seq": 3,
+      "layer": "SYS",
+      "type": "action",
+      "action": "verify_result",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789569257.9942021
+    },
+    {
+      "seq": 4,
+      "layer": "SYS",
+      "type": "report",
+      "action": "report",
+      "args": {
+        "note": "Bubble sort implementation and testing completed successfully."
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789569259.208885
+    }
+  ],
+  "operation_ledger": [
+    {
+      "operation_seq": 0,
+      "kind": "create_file",
+      "cell": "create_file",
+      "args": {
+        "filename": "solution.py"
+      },
+      "pre": {
+        "file_exists": false,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789569251.2496986,
+      "post": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 1,
+      "kind": "write_source",
+      "cell": "write_source",
+      "args": {
+        "chars": 268
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789569254.4014132,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 2,
+      "kind": "execute_program",
+      "cell": "execute_program",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789569256.5722065,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 3,
+      "kind": "verify_result",
+      "cell": "verify_result",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789569257.9940326,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 4,
+      "kind": "report",
+      "cell": "report",
+      "args": {
+        "note": "Bubble sort implementation and testing completed successfully."
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "executed": true,
+      "observed_at": 1789569259.2087238,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "outcome": "executed"
+    }
+  ],
+  "interventions": [],
+  "final_state": {
+    "file_exists": true,
+    "source_written": true,
+    "executed": true,
+    "exit_ok": true,
+    "test_passed": true,
+    "verified": true
+  },
+  "final_source": "def solve(xs):\n    n = len(xs)\n    sorted_list = xs[:]\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if sorted_list[j] > sorted_list[j+1]:\n                sorted_list[j], sorted_list[j+1] = sorted_list[j+1], sorted_list[j]\n    return sorted_list",
+  "final_stdout": "[1, 2, 3, 4, 5, 6, 7, 8, 9]\n",
+  "final_stderr": "",
+  "env_stats": {
+    "applied": 5,
+    "rejected_by_world": 0,
+    "interventions": 0,
+    "attempted_operations": 5
+  }
+}

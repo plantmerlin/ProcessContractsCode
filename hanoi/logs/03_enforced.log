@@ -1,0 +1,11 @@
+HANOI | 3 disks | gpt-4o | prompt=with_rules | ENFORCED vs ba7359ae5bf6
+[00] completed  moves=  7 blocked=  0 refused= 2 solved=Y events=  8  14.0s  c0c1   <- SEED CANDIDATE
+[01] completed  moves=  7 blocked=  0 refused= 8 solved=Y events=  8  10.7s  2bd4   <- SEED CANDIDATE
+[02] completed  moves=  7 blocked=  0 refused= 2 solved=Y events=  8   8.5s  e031   <- SEED CANDIDATE
+[03] completed  moves=  7 blocked=  0 refused= 6 solved=Y events=  8  10.4s  2549   <- SEED CANDIDATE
+[04] completed  moves=  7 blocked=  0 refused=10 solved=Y events=  8  27.1s  5ab5   <- SEED CANDIDATE
+[05] completed  moves=  7 blocked=  0 refused= 0 solved=Y events=  8   7.0s  51c8   <- SEED CANDIDATE
+[06] completed  moves=  7 blocked=  0 refused=21 solved=Y events=  8  74.4s  06a4   <- SEED CANDIDATE
+[07] completed  moves=  7 blocked=  0 refused=11 solved=Y events=  8  28.1s  ba62   <- SEED CANDIDATE
+[08] completed  moves=  7 blocked=  0 refused=14 solved=Y events=  8  25.9s  9916   <- SEED CANDIDATE
+[09] completed  moves=  7 blocked=  0 refused= 0 solved=Y events=  8   8.1s  ac49   <- SEED CANDIDATE

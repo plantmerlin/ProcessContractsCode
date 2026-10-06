@@ -1,0 +1,350 @@
+{
+  "atf_version": "1.0",
+  "run_id": "2026-09-16T143011Z_codegen_e1a520713ce50a588e1d7a869641deda",
+  "task": "codegen",
+  "artefact_ref": null,
+  "agent": {
+    "framework": "openai-agents",
+    "model": "gpt-4o"
+  },
+  "store_schema": {
+    "file_exists": "bool",
+    "source_written": "bool",
+    "executed": "bool",
+    "exit_ok": "bool",
+    "test_passed": "bool",
+    "verified": "bool"
+  },
+  "scope": {
+    "entry": "true",
+    "exit_guard": "verified /\\ test_passed"
+  },
+  "provenance_default": "runtime_observed",
+  "started_at": 1789569001.1926708,
+  "harness": "codegen-v1",
+  "direction": "undirected",
+  "unapplied_events_recorded": true,
+  "adapter_version": "codegen/1.0.0",
+  "parallel_tool_calls": false,
+  "spec": {
+    "spec": "binary_insertion_sort",
+    "filename": "solution.py",
+    "prompt": "Implement binary insertion sort. `solve(xs)` takes a list of integers and returns a new list containing the same integers in ascending order, sorted by insertion sort where each insertion position is found by binary search.",
+    "test_input": [
+      5,
+      3,
+      8,
+      1,
+      9,
+      2,
+      7,
+      4,
+      6
+    ],
+    "expected_output": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "agent_instructions": "You are writing and testing a small Python program.\n\nTASK: Implement binary insertion sort. `solve(xs)` takes a list of integers and returns a new list containing the same integers in ascending order, sorted by insertion sort where each insertion position is found by binary search.\n\nWrite a function named `solve` in the file `solution.py`. It receives the test input as its only argument and must return the result. Write only the function (and any helpers it needs); the harness supplies the input and captures what it returns.\n\nAvailable operations:\n  create_file      create the file\n  write_source     write Python source into the file\n  execute_program  run the program on the test input\n  verify_result    check the program's result against the expected output\n  report           say that you have finished\n\nCall report when you have finished.",
+  "agent_final_output": "The binary insertion sort has been implemented successfully and passed all tests. If you need further assistance, feel free to ask!",
+  "runner_outcome": "completed",
+  "determinism_ok": true,
+  "wall_seconds": 11.5,
+  "events": [
+    {
+      "seq": 0,
+      "layer": "SYS",
+      "type": "action",
+      "action": "create_file",
+      "args": {
+        "filename": "solution.py"
+      },
+      "pre": {
+        "file_exists": false,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789569001.1926708
+    },
+    {
+      "seq": 1,
+      "layer": "SYS",
+      "type": "action",
+      "action": "write_source",
+      "args": {
+        "chars": 378
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789569005.03561
+    },
+    {
+      "seq": 2,
+      "layer": "SYS",
+      "type": "action",
+      "action": "execute_program",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789569006.3888075
+    },
+    {
+      "seq": 3,
+      "layer": "SYS",
+      "type": "action",
+      "action": "verify_result",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789569007.6898112
+    },
+    {
+      "seq": 4,
+      "layer": "SYS",
+      "type": "report",
+      "action": "report",
+      "args": {
+        "note": "Binary insertion sort implemented successfully and passed all tests."
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789569009.6054945
+    }
+  ],
+  "operation_ledger": [
+    {
+      "operation_seq": 0,
+      "kind": "create_file",
+      "cell": "create_file",
+      "args": {
+        "filename": "solution.py"
+      },
+      "pre": {
+        "file_exists": false,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789569001.1914015,
+      "post": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 1,
+      "kind": "write_source",
+      "cell": "write_source",
+      "args": {
+        "chars": 378
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789569005.0330315,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 2,
+      "kind": "execute_program",
+      "cell": "execute_program",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789569006.2583692,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 3,
+      "kind": "verify_result",
+      "cell": "verify_result",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789569007.689779,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 4,
+      "kind": "report",
+      "cell": "report",
+      "args": {
+        "note": "Binary insertion sort implemented successfully and passed all tests."
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "executed": true,
+      "observed_at": 1789569009.605483,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "outcome": "executed"
+    }
+  ],
+  "interventions": [],
+  "final_state": {
+    "file_exists": true,
+    "source_written": true,
+    "executed": true,
+    "exit_ok": true,
+    "test_passed": true,
+    "verified": true
+  },
+  "final_source": "def binary_search(arr, val, start, end):\n    while start < end:\n        mid = (start + end) // 2\n        if arr[mid] < val:\n            start = mid + 1\n        else:\n            end = mid\n    return start\n\n\ndef solve(xs):\n    for i in range(1, len(xs)):\n        val = xs[i]\n        j = binary_search(xs, val, 0, i)\n        xs = xs[:j] + [val] + xs[j:i] + xs[i+1:]\n    return xs\n",
+  "final_stdout": "[1, 2, 3, 4, 5, 6, 7, 8, 9]\n",
+  "final_stderr": "",
+  "env_stats": {
+    "applied": 5,
+    "rejected_by_world": 0,
+    "interventions": 0,
+    "attempted_operations": 5
+  }
+}

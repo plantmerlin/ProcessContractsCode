@@ -1,0 +1,1150 @@
+{
+  "atf_version": "1.0",
+  "run_id": "2026-08-24T192234Z_hanoi3_ab82614d2a9b05cf12079362a7be4f3b",
+  "task": "hanoi3",
+  "artefact_ref": null,
+  "agent": {
+    "framework": "openai-agents",
+    "model": "gpt-4o"
+  },
+  "store_schema": {
+    "legal_ab": "bool",
+    "legal_ac": "bool",
+    "legal_ba": "bool",
+    "legal_bc": "bool",
+    "legal_ca": "bool",
+    "legal_cb": "bool",
+    "config": "string",
+    "solved": "bool"
+  },
+  "scope": {
+    "entry": "true",
+    "exit_guard": "solved"
+  },
+  "provenance_default": "runtime_observed",
+  "started_at": 1787599331.6024377,
+  "harness": "hanoi-v1",
+  "direction": "undirected",
+  "unapplied_events_recorded": true,
+  "interventions": [],
+  "runtime_findings": [],
+  "transactions": [],
+  "attempts": [],
+  "monitor_transitions": [],
+  "adapter_version": "hanoi/1.0.0",
+  "prompt_variant": "with_rules",
+  "disks": 3,
+  "runner_outcome": "completed",
+  "determinism_ok": true,
+  "wall_seconds": 23.9,
+  "events": [
+    {
+      "seq": 0,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_invalid",
+      "args": {
+        "disk": 2,
+        "to": "B"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "321|-|-",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "321|-|-",
+        "solved": false
+      },
+      "applied": false,
+      "note": "disk 2 is not on top of peg A",
+      "observed_at": 1787599331.6024377
+    },
+    {
+      "seq": 1,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ac",
+      "args": {
+        "disk": 1,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "321|-|-",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599331.6026676
+    },
+    {
+      "seq": 2,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ac",
+      "args": {
+        "disk": 2,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "applied": false,
+      "note": "disk 1 is smaller than disk 2",
+      "observed_at": 1787599333.4244242
+    },
+    {
+      "seq": 3,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_cb",
+      "args": {
+        "disk": 1,
+        "to": "B"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "32|1|-",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599333.4246554
+    },
+    {
+      "seq": 4,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_bc",
+      "args": {
+        "disk": 1,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "32|1|-",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599334.413734
+    },
+    {
+      "seq": 5,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ab",
+      "args": {
+        "disk": 2,
+        "to": "B"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599335.7541254
+    },
+    {
+      "seq": 6,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_invalid",
+      "args": {
+        "disk": 1,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "applied": false,
+      "note": "disk 1 is already on C",
+      "observed_at": 1787599335.7543592
+    },
+    {
+      "seq": 7,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ac",
+      "args": {
+        "disk": 3,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "applied": false,
+      "note": "disk 1 is smaller than disk 3",
+      "observed_at": 1787599336.8969226
+    },
+    {
+      "seq": 8,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ca",
+      "args": {
+        "disk": 1,
+        "to": "A"
+      },
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "31|2|-",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599336.8971558
+    },
+    {
+      "seq": 9,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_invalid",
+      "args": {
+        "disk": 3,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "31|2|-",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "31|2|-",
+        "solved": false
+      },
+      "applied": false,
+      "note": "disk 3 is not on top of peg A",
+      "observed_at": 1787599343.0228305
+    },
+    {
+      "seq": 10,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_invalid",
+      "args": {
+        "disk": 3,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "31|2|-",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "31|2|-",
+        "solved": false
+      },
+      "applied": false,
+      "note": "disk 3 is not on top of peg A",
+      "observed_at": 1787599344.006659
+    },
+    {
+      "seq": 11,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ab",
+      "args": {
+        "disk": 1,
+        "to": "B"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "31|2|-",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "3|21|-",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599344.0068831
+    },
+    {
+      "seq": 12,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ac",
+      "args": {
+        "disk": 3,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "3|21|-",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": true,
+        "legal_cb": false,
+        "config": "-|21|3",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599344.8998551
+    },
+    {
+      "seq": 13,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ba",
+      "args": {
+        "disk": 1,
+        "to": "A"
+      },
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": true,
+        "legal_cb": false,
+        "config": "-|21|3",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "1|2|3",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599350.3962398
+    },
+    {
+      "seq": 14,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_bc",
+      "args": {
+        "disk": 2,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "1|2|3",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": true,
+        "config": "1|-|32",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599350.3964884
+    },
+    {
+      "seq": 15,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ac",
+      "args": {
+        "disk": 1,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": true,
+        "config": "1|-|32",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599351.3767045
+    },
+    {
+      "seq": 16,
+      "layer": "SYS",
+      "type": "report",
+      "action": "report",
+      "args": {
+        "note": "Puzzle solved successfully with all disks on peg C in order."
+      },
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "applied": true,
+      "observed_at": 1787599353.3779714
+    }
+  ],
+  "operation_ledger": [
+    {
+      "operation_seq": 0,
+      "kind": "move",
+      "disk": 2,
+      "to": "B",
+      "cell": null,
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "321|-|-",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": false,
+      "observed_at": 1787599331.6024005,
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "321|-|-",
+        "solved": false
+      },
+      "outcome": "not_applied:disk 2 is not on top of peg A"
+    },
+    {
+      "operation_seq": 1,
+      "kind": "move",
+      "disk": 1,
+      "to": "C",
+      "cell": "move_ac",
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "321|-|-",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599331.6026337,
+      "post": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 2,
+      "kind": "move",
+      "disk": 2,
+      "to": "C",
+      "cell": "move_ac",
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": false,
+      "observed_at": 1787599333.4243832,
+      "post": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "outcome": "not_applied:disk 1 is smaller than disk 2"
+    },
+    {
+      "operation_seq": 3,
+      "kind": "move",
+      "disk": 1,
+      "to": "B",
+      "cell": "move_cb",
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599333.4246175,
+      "post": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "32|1|-",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 4,
+      "kind": "move",
+      "disk": 1,
+      "to": "C",
+      "cell": "move_bc",
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "32|1|-",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599334.4136972,
+      "post": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 5,
+      "kind": "move",
+      "disk": 2,
+      "to": "B",
+      "cell": "move_ab",
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599335.7540865,
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 6,
+      "kind": "move",
+      "disk": 1,
+      "to": "C",
+      "cell": null,
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": false,
+      "observed_at": 1787599335.7543218,
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "outcome": "not_applied:disk 1 is already on C"
+    },
+    {
+      "operation_seq": 7,
+      "kind": "move",
+      "disk": 3,
+      "to": "C",
+      "cell": "move_ac",
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": false,
+      "observed_at": 1787599336.8968816,
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "outcome": "not_applied:disk 1 is smaller than disk 3"
+    },
+    {
+      "operation_seq": 8,
+      "kind": "move",
+      "disk": 1,
+      "to": "A",
+      "cell": "move_ca",
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599336.8971143,
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "31|2|-",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 9,
+      "kind": "move",
+      "disk": 3,
+      "to": "C",
+      "cell": null,
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "31|2|-",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": false,
+      "observed_at": 1787599343.0227854,
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "31|2|-",
+        "solved": false
+      },
+      "outcome": "not_applied:disk 3 is not on top of peg A"
+    },
+    {
+      "operation_seq": 10,
+      "kind": "move",
+      "disk": 3,
+      "to": "C",
+      "cell": null,
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "31|2|-",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": false,
+      "observed_at": 1787599344.0066216,
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "31|2|-",
+        "solved": false
+      },
+      "outcome": "not_applied:disk 3 is not on top of peg A"
+    },
+    {
+      "operation_seq": 11,
+      "kind": "move",
+      "disk": 1,
+      "to": "B",
+      "cell": "move_ab",
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "31|2|-",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599344.0068455,
+      "post": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "3|21|-",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 12,
+      "kind": "move",
+      "disk": 3,
+      "to": "C",
+      "cell": "move_ac",
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "3|21|-",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599344.899823,
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": true,
+        "legal_cb": false,
+        "config": "-|21|3",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 13,
+      "kind": "move",
+      "disk": 1,
+      "to": "A",
+      "cell": "move_ba",
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": true,
+        "legal_cb": false,
+        "config": "-|21|3",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599350.3961987,
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "1|2|3",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 14,
+      "kind": "move",
+      "disk": 2,
+      "to": "C",
+      "cell": "move_bc",
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "1|2|3",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599350.3964493,
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": true,
+        "config": "1|-|32",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 15,
+      "kind": "move",
+      "disk": 1,
+      "to": "C",
+      "cell": "move_ac",
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": true,
+        "config": "1|-|32",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599351.3766687,
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 16,
+      "kind": "report",
+      "cell": "report",
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599353.3779323,
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "outcome": "executed"
+    }
+  ],
+  "env_stats": {
+    "moves": 10,
+    "blocked": 6,
+    "attempted_operations": 17
+  }
+}

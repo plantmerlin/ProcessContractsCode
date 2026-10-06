@@ -1,0 +1,1031 @@
+{
+  "atf_version": "1.0",
+  "run_id": "2026-08-24T192737Z_hanoi3_54dfcebceeac6a8ff48f2c841cabac49",
+  "task": "hanoi3",
+  "artefact_ref": "ba7359ae5bf662128e9b5c5f36efec43480b0a9cc9eb8dc58d7f827bb6a76618@1.0.0",
+  "agent": {
+    "framework": "openai-agents",
+    "model": "gpt-4o"
+  },
+  "store_schema": {
+    "legal_ab": "bool",
+    "legal_ac": "bool",
+    "legal_ba": "bool",
+    "legal_bc": "bool",
+    "legal_ca": "bool",
+    "legal_cb": "bool",
+    "config": "string",
+    "solved": "bool"
+  },
+  "scope": {
+    "entry": "true",
+    "exit_guard": "solved"
+  },
+  "provenance_default": "runtime_observed",
+  "started_at": 1787599650.932175,
+  "harness": "hanoi-v1",
+  "direction": "enforced",
+  "unapplied_events_recorded": false,
+  "interventions": [],
+  "runtime_findings": [],
+  "transactions": [
+    {
+      "cells": [
+        "move_ac"
+      ],
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "321|-|-",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "discriminator": "move",
+      "applied": true,
+      "observed_at": 1787599650.932097,
+      "id": 0,
+      "outcome": "advanced",
+      "candidates": 1
+    },
+    {
+      "cells": [
+        "move_ab"
+      ],
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "discriminator": "move",
+      "applied": true,
+      "observed_at": 1787599650.9324079,
+      "id": 1,
+      "outcome": "advanced",
+      "candidates": 1
+    },
+    {
+      "cells": [
+        "move_cb"
+      ],
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "3|21|-",
+        "solved": false
+      },
+      "discriminator": "move",
+      "applied": true,
+      "observed_at": 1787599650.9326577,
+      "id": 2,
+      "outcome": "advanced",
+      "candidates": 1
+    },
+    {
+      "cells": [
+        "move_ac"
+      ],
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "3|21|-",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": true,
+        "legal_cb": false,
+        "config": "-|21|3",
+        "solved": false
+      },
+      "discriminator": "move",
+      "applied": true,
+      "observed_at": 1787599650.9329083,
+      "id": 3,
+      "outcome": "advanced",
+      "candidates": 1
+    },
+    {
+      "cells": [
+        "move_ba"
+      ],
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": true,
+        "legal_cb": false,
+        "config": "-|21|3",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "1|2|3",
+        "solved": false
+      },
+      "discriminator": "move",
+      "applied": true,
+      "observed_at": 1787599650.9332275,
+      "id": 4,
+      "outcome": "advanced",
+      "candidates": 1
+    },
+    {
+      "cells": [
+        "move_bc"
+      ],
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "1|2|3",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": true,
+        "config": "1|-|32",
+        "solved": false
+      },
+      "discriminator": "move",
+      "applied": true,
+      "observed_at": 1787599650.933492,
+      "id": 5,
+      "outcome": "advanced",
+      "candidates": 1
+    },
+    {
+      "cells": [
+        "move_ac"
+      ],
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": true,
+        "config": "1|-|32",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "discriminator": "move",
+      "applied": true,
+      "observed_at": 1787599650.9337983,
+      "id": 6,
+      "outcome": "advanced",
+      "candidates": 1
+    },
+    {
+      "cells": [
+        "report"
+      ],
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "discriminator": null,
+      "applied": true,
+      "observed_at": 1787599656.1824322,
+      "id": 7,
+      "outcome": "advanced",
+      "candidates": 1
+    }
+  ],
+  "attempts": [],
+  "monitor_transitions": [
+    {
+      "txn": 0,
+      "cells": [
+        "move_ac"
+      ],
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "321|-|-",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "observed_at": 1787599650.93216
+    },
+    {
+      "txn": 1,
+      "cells": [
+        "move_ab"
+      ],
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "observed_at": 1787599650.9324608
+    },
+    {
+      "txn": 2,
+      "cells": [
+        "move_cb"
+      ],
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "3|21|-",
+        "solved": false
+      },
+      "observed_at": 1787599650.9327102
+    },
+    {
+      "txn": 3,
+      "cells": [
+        "move_ac"
+      ],
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "3|21|-",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": true,
+        "legal_cb": false,
+        "config": "-|21|3",
+        "solved": false
+      },
+      "observed_at": 1787599650.9329617
+    },
+    {
+      "txn": 4,
+      "cells": [
+        "move_ba"
+      ],
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": true,
+        "legal_cb": false,
+        "config": "-|21|3",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "1|2|3",
+        "solved": false
+      },
+      "observed_at": 1787599650.9332795
+    },
+    {
+      "txn": 5,
+      "cells": [
+        "move_bc"
+      ],
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "1|2|3",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": true,
+        "config": "1|-|32",
+        "solved": false
+      },
+      "observed_at": 1787599650.9335513
+    },
+    {
+      "txn": 6,
+      "cells": [
+        "move_ac"
+      ],
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": true,
+        "config": "1|-|32",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "observed_at": 1787599650.933853
+    },
+    {
+      "txn": 7,
+      "cells": [
+        "report"
+      ],
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "observed_at": 1787599656.1825118
+    }
+  ],
+  "adapter_version": "hanoi/1.0.0",
+  "prompt_variant": "with_rules",
+  "disks": 3,
+  "runner_outcome": "completed",
+  "determinism_ok": true,
+  "wall_seconds": 8.1,
+  "events": [
+    {
+      "seq": 0,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ac",
+      "args": {
+        "disk": 1,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "321|-|-",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599650.932175
+    },
+    {
+      "seq": 1,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ab",
+      "args": {
+        "disk": 2,
+        "to": "B"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599650.9324725
+    },
+    {
+      "seq": 2,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_cb",
+      "args": {
+        "disk": 1,
+        "to": "B"
+      },
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "3|21|-",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599650.9327219
+    },
+    {
+      "seq": 3,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ac",
+      "args": {
+        "disk": 3,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "3|21|-",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": true,
+        "legal_cb": false,
+        "config": "-|21|3",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599650.9329739
+    },
+    {
+      "seq": 4,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ba",
+      "args": {
+        "disk": 1,
+        "to": "A"
+      },
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": true,
+        "legal_cb": false,
+        "config": "-|21|3",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "1|2|3",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599650.9332917
+    },
+    {
+      "seq": 5,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_bc",
+      "args": {
+        "disk": 2,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "1|2|3",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": true,
+        "config": "1|-|32",
+        "solved": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599650.9335632
+    },
+    {
+      "seq": 6,
+      "layer": "SYS",
+      "type": "action",
+      "action": "move_ac",
+      "args": {
+        "disk": 1,
+        "to": "C"
+      },
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": true,
+        "config": "1|-|32",
+        "solved": false
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1787599650.9338639
+    },
+    {
+      "seq": 7,
+      "layer": "SYS",
+      "type": "report",
+      "action": "report",
+      "args": {
+        "note": "Puzzle solved successfully."
+      },
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "applied": true,
+      "observed_at": 1787599656.1824267
+    }
+  ],
+  "operation_ledger": [
+    {
+      "operation_seq": 0,
+      "kind": "move",
+      "disk": 1,
+      "to": "C",
+      "cell": "move_ac",
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "321|-|-",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599650.9320228,
+      "post": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 1,
+      "kind": "move",
+      "disk": 2,
+      "to": "B",
+      "cell": "move_ab",
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "32|-|1",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599650.9323232,
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 2,
+      "kind": "move",
+      "disk": 1,
+      "to": "B",
+      "cell": "move_cb",
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "3|2|1",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599650.9325986,
+      "post": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "3|21|-",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 3,
+      "kind": "move",
+      "disk": 3,
+      "to": "C",
+      "cell": "move_ac",
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": true,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "3|21|-",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599650.9328518,
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": true,
+        "legal_cb": false,
+        "config": "-|21|3",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 4,
+      "kind": "move",
+      "disk": 1,
+      "to": "A",
+      "cell": "move_ba",
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": true,
+        "legal_bc": true,
+        "legal_ca": true,
+        "legal_cb": false,
+        "config": "-|21|3",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599650.933148,
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "1|2|3",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 5,
+      "kind": "move",
+      "disk": 2,
+      "to": "C",
+      "cell": "move_bc",
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": true,
+        "legal_ca": false,
+        "legal_cb": false,
+        "config": "1|2|3",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599650.9334254,
+      "post": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": true,
+        "config": "1|-|32",
+        "solved": false
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 6,
+      "kind": "move",
+      "disk": 1,
+      "to": "C",
+      "cell": "move_ac",
+      "pre": {
+        "legal_ab": true,
+        "legal_ac": true,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": false,
+        "legal_cb": true,
+        "config": "1|-|32",
+        "solved": false
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599650.9337416,
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "outcome": "applied"
+    },
+    {
+      "operation_seq": 7,
+      "kind": "report",
+      "cell": "report",
+      "pre": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "dispatched": true,
+      "executed": true,
+      "applied": true,
+      "observed_at": 1787599656.182343,
+      "post": {
+        "legal_ab": false,
+        "legal_ac": false,
+        "legal_ba": false,
+        "legal_bc": false,
+        "legal_ca": true,
+        "legal_cb": true,
+        "config": "-|-|321",
+        "solved": true
+      },
+      "outcome": "executed"
+    }
+  ],
+  "env_stats": {
+    "moves": 7,
+    "blocked": 0,
+    "attempted_operations": 8
+  }
+}

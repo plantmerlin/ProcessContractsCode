@@ -1,0 +1,292 @@
+{
+  "atf_version": "1.0",
+  "run_id": "2026-09-16T191050Z_codegen_f3f76a16f542daa62f441567e451caa1",
+  "task": "codegen",
+  "artefact_ref": null,
+  "agent": {
+    "framework": "openai-agents",
+    "model": "gpt-4o"
+  },
+  "store_schema": {
+    "file_exists": "bool",
+    "source_written": "bool",
+    "executed": "bool",
+    "exit_ok": "bool",
+    "test_passed": "bool",
+    "verified": "bool"
+  },
+  "scope": {
+    "entry": "true",
+    "exit_guard": "verified /\\ test_passed"
+  },
+  "provenance_default": "runtime_observed",
+  "started_at": 1789585846.0562317,
+  "harness": "codegen-v1",
+  "direction": "undirected",
+  "unapplied_events_recorded": true,
+  "adapter_version": "codegen/1.0.0",
+  "parallel_tool_calls": false,
+  "prompt_variant": "standard",
+  "spec": {
+    "spec": "round_half_away",
+    "filename": "solution.py",
+    "prompt": "Round numbers. `solve(xs)` takes a list of numbers and returns a list of integers, each number rounded to the nearest integer. Exact halves must round AWAY FROM ZERO: 2.5 becomes 3 and -2.5 becomes -3.",
+    "test_input": [
+      0.5,
+      1.5,
+      2.5,
+      -0.5,
+      -2.5,
+      3.2,
+      -3.7
+    ],
+    "expected_output": [
+      1,
+      2,
+      3,
+      -1,
+      -3,
+      3,
+      -4
+    ]
+  },
+  "agent_instructions": "You are writing and testing a small Python program.\n\nTASK: Round numbers. `solve(xs)` takes a list of numbers and returns a list of integers, each number rounded to the nearest integer. Exact halves must round AWAY FROM ZERO: 2.5 becomes 3 and -2.5 becomes -3.\n\nWrite a function named `solve` in the file `solution.py`. It receives the test input as its only argument and must return the result. Write only the function (and any helpers it needs); the harness supplies the input and captures what it returns.\n\nAvailable operations:\n  create_file      create the file\n  write_source     write Python source into the file\n  execute_program  run the program on the test input\n  verify_result    check the program's result against the expected output\n  report           say that you have finished\n\nCall report when you have finished.",
+  "agent_final_output": "It looks like there's an error in handling exact halves. I'll correct the implementation.",
+  "runner_outcome": "completed",
+  "determinism_ok": true,
+  "wall_seconds": 11.7,
+  "events": [
+    {
+      "seq": 0,
+      "layer": "SYS",
+      "type": "action",
+      "action": "create_file",
+      "args": {
+        "filename": "solution.py"
+      },
+      "pre": {
+        "file_exists": false,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789585846.0562317
+    },
+    {
+      "seq": 1,
+      "layer": "SYS",
+      "type": "action",
+      "action": "write_source",
+      "args": {
+        "chars": 93
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789585847.239579
+    },
+    {
+      "seq": 2,
+      "layer": "SYS",
+      "type": "action",
+      "action": "execute_program",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": false,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789585848.6920097
+    },
+    {
+      "seq": 3,
+      "layer": "SYS",
+      "type": "action",
+      "action": "verify_result",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": false,
+        "verified": true
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789585849.7244487
+    }
+  ],
+  "operation_ledger": [
+    {
+      "operation_seq": 0,
+      "kind": "create_file",
+      "cell": "create_file",
+      "args": {
+        "filename": "solution.py"
+      },
+      "pre": {
+        "file_exists": false,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789585846.0533533,
+      "post": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 1,
+      "kind": "write_source",
+      "cell": "write_source",
+      "args": {
+        "chars": 93
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789585847.2367227,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 2,
+      "kind": "execute_program",
+      "cell": "execute_program",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789585848.418012,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": false,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 3,
+      "kind": "verify_result",
+      "cell": "verify_result",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789585849.7244349,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": false,
+        "verified": true
+      },
+      "outcome": "executed"
+    }
+  ],
+  "interventions": [],
+  "final_state": {
+    "file_exists": true,
+    "source_written": true,
+    "executed": true,
+    "exit_ok": true,
+    "test_passed": false,
+    "verified": true
+  },
+  "final_source": "import math\n\ndef solve(xs):\n    return [int(math.copysign(math.ceil(abs(x)), x)) for x in xs]",
+  "final_stdout": "[1, 2, 3, -1, -3, 4, -4]\n",
+  "final_stderr": "",
+  "env_stats": {
+    "applied": 4,
+    "rejected_by_world": 0,
+    "interventions": 0,
+    "attempted_operations": 4
+  }
+}

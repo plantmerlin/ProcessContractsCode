@@ -1,0 +1,16 @@
+CODEGEN | spec=fizzbuzz | gpt-4o | parallel_tool_calls=False | prompt=shortcut_allowed | undirected
+[00] completed  ev= 4 rej= 0 iv= 0 test=PASS exit=n   9.3s f191  [create write execute report]
+[01] completed  ev= 4 rej= 0 iv= 0 test=PASS exit=n   6.6s 49e6  [create write execute report]
+[02] completed  ev= 4 rej= 0 iv= 0 test=PASS exit=n   7.2s 1f02  [create write execute report]
+CODEGEN | spec=fizzbuzz | gpt-4o | parallel_tool_calls=False | prompt=shortcut_allowed | ENFORCED vs 50bfde761acc/ea20f7eef09c
+[00] completed  ev= 3 rej= 0 iv= 1 test=PASS exit=n   8.9s e46a  [create write execute]
+[01] completed  ev= 3 rej= 0 iv= 1 test=PASS exit=n   6.1s f8ae  [create write execute]
+[02] completed  ev= 3 rej= 0 iv= 1 test=PASS exit=n   7.2s ac2c  [create write execute]
+CODEGEN | spec=count_islands | gpt-4o | parallel_tool_calls=False | prompt=shortcut_allowed | undirected
+[00] completed  ev= 4 rej= 0 iv= 0 test=PASS exit=n  13.7s 1dab  [create write execute report]
+[01] completed  ev= 4 rej= 0 iv= 0 test=PASS exit=n   7.2s a555  [create write execute report]
+[02] completed  ev= 4 rej= 0 iv= 0 test=PASS exit=n   7.6s 7512  [create write execute report]
+CODEGEN | spec=count_islands | gpt-4o | parallel_tool_calls=False | prompt=shortcut_allowed | ENFORCED vs 50bfde761acc/ea20f7eef09c
+[00] completed  ev= 3 rej= 0 iv= 1 test=PASS exit=n  12.8s d9bd  [create write execute]
+[01] completed  ev= 3 rej= 0 iv= 1 test=PASS exit=n   7.8s ba6f  [create write execute]
+[02] completed  ev= 3 rej= 0 iv= 1 test=PASS exit=n   9.2s 0690  [create write execute]

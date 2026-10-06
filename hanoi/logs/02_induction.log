@@ -1,0 +1,16 @@
+seed: 2026-08-24T192151Z_hanoi3_3cb6a0f11cd0581b442711f1df0a16f2  (8 events, gpt-4o)
+   seq 0 move_ac      32|-|1
+   seq 1 move_ab      3|2|1
+   seq 2 move_cb      3|21|-
+   seq 3 move_ac      -|21|3
+   seq 4 move_ba      1|2|3
+   seq 5 move_bc      1|-|32
+   seq 6 move_ac      -|-|321
+   seq 7 report       -|-|321
+
+seed self-verification: conforms (0 misalignments), completeness=full
+
+contract -> .\artefacts\hanoi3.adf.json
+  artefact_id  ba7359ae5bf6
+  content_hash 0a43d181271f
+  seed run     16f2

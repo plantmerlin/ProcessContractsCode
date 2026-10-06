@@ -1,0 +1,318 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "artefact-spec/atf.trace.schema.json",
+ "title": "ATF v1.0 - Agent Trace Format, surface G (trace.json)",
+ "type": "object",
+ "required": [
+  "atf_version",
+  "run_id",
+  "task",
+  "agent",
+  "store_schema",
+  "scope",
+  "provenance_default",
+  "events"
+ ],
+ "properties": {
+  "atf_version": {
+   "const": "1.0"
+  },
+  "run_id": {
+   "type": "string",
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}T[0-9:.]+Z?_[a-z0-9_]+_[0-9a-f]{4,32}$"
+  },
+  "task": {
+   "type": "string",
+   "pattern": "^[a-z][a-z0-9_]*$"
+  },
+  "artefact_ref": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "description": "artefact_id@version this run was driven/checked against; null for seed runs"
+  },
+  "agent": {
+   "type": "object",
+   "required": [
+    "framework",
+    "model"
+   ],
+   "properties": {
+    "framework": {
+     "type": "string"
+    },
+    "model": {
+     "type": "string"
+    }
+   }
+  },
+  "store_schema": {
+   "type": "object",
+   "minProperties": 1,
+   "propertyNames": {
+    "pattern": "^[a-z][a-z0-9_]*$"
+   },
+   "additionalProperties": {
+    "type": "string",
+    "pattern": "^(bool|int|number|string|enum\\[[A-Za-z0-9_,-]+\\])$"
+   }
+  },
+  "scope": {
+   "type": "object",
+   "required": [
+    "entry",
+    "exit_guard"
+   ],
+   "properties": {
+    "entry": {
+     "$ref": "#/$defs/guard"
+    },
+    "exit_guard": {
+     "$ref": "#/$defs/guard"
+    }
+   }
+  },
+  "provenance_default": {
+   "$ref": "#/$defs/provenance"
+  },
+  "started_at": {
+   "type": "number"
+  },
+  "events": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/event"
+   }
+  },
+  "transactions": {
+   "type": "array",
+   "description": "Gesture transactions: one agent gesture with the cells it produced, bracketed by the two states actually observed.",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "integer"
+     },
+     "cells": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "pre": {
+      "type": "object"
+     },
+     "post": {
+      "type": "object"
+     },
+     "outcome": {
+      "type": "string",
+      "enum": [
+       "observed",
+       "advanced",
+       "STRUCTURAL",
+       "GUARD_PRE",
+       "GUARD_POST",
+       "STALE_PERMIT",
+       "SCHEMA",
+       "EMPTY",
+       "INCONSISTENT"
+      ],
+      "description": "'observed' where no gate ran (undirected/directed); otherwise the gate's decision."
+     },
+     "discriminator": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "observed_at": {
+      "type": "number"
+     }
+    },
+    "required": [
+     "id",
+     "cells",
+     "pre",
+     "post"
+    ]
+   }
+  },
+  "attempts": {
+   "type": "array",
+   "description": "Gesture transactions that did not advance the process: evidence about the run, not transitions of the contract.",
+   "items": {
+    "type": "object"
+   }
+  },
+  "operation_ledger": {
+   "type": "array",
+   "description": "Every proposed agent operation, including pre-execution vetoes. Use dispatched/executed to distinguish proposals that reached the environment; execution events record operations that crossed that boundary.",
+   "items": {
+    "type": "object"
+   }
+  },
+  "executed_unclassified": {
+   "type": "integer"
+  },
+  "all_executed_actions_mediated": {
+   "type": "boolean"
+  },
+  "unclassified_attempts": {
+   "type": "integer"
+  },
+  "experiment_id": {
+   "type": "string",
+   "description": "Declared before execution; membership of an experiment is not decided by recency."
+  },
+  "contract_content_hash": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "description": "The content hash of the contract this run was checked against."
+  },
+  "tool_order_seed": {
+   "type": "string"
+  },
+  "tool_order": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "block": {
+   "type": [
+    "integer",
+    "null"
+   ],
+   "description": "Randomised block index; arms are interleaved rather than run in sequential batches."
+  },
+  "monitor_transitions": {
+   "type": "array",
+   "description": "Transactions that advanced the residual contract.",
+   "items": {
+    "type": "object"
+   }
+  },
+  "unapplied_events_recorded": {
+   "type": "boolean",
+   "description": "LEGACY recording-policy flag. True means operations that reached the environment but were not applied are still execution events. Pre-execution gate vetoes are never execution events and belong in interventions/operation_ledger."
+  },
+  "interventions": {
+   "type": "array",
+   "description": "Agent proposals refused before dispatch. They are evidence about enforcement, not execution events, because the world was never touched.",
+   "items": {
+    "type": "object"
+   }
+  },
+  "runtime_findings": {
+   "type": "array",
+   "description": "Faults diagnosed after an operation executed. Unlike interventions, these belong to the executed history and cannot be retroactively vetoed.",
+   "items": {
+    "type": "object"
+   }
+  }
+ },
+ "$defs": {
+  "provenance": {
+   "enum": [
+    "runtime_observed",
+    "sandbox_observed",
+    "dummy",
+    "declared"
+   ]
+  },
+  "guard": {
+   "type": "string",
+   "description": "Guard grammar S4 (ASCII rendering): true | L | G /\\ G ; L ::= f | not f | f op k",
+   "pattern": "^(true|(not )?[a-z][a-z0-9_]*( *(=|!=|<|<=|>|>=) *[A-Za-z0-9_.\"-]+)?)( */\\\\ *(not )?[a-z][a-z0-9_]*( *(=|!=|<|<=|>|>=) *[A-Za-z0-9_.\"-]+)?)*$"
+  },
+  "event": {
+   "type": "object",
+   "required": [
+    "seq",
+    "layer",
+    "type",
+    "action",
+    "args",
+    "pre",
+    "post",
+    "observed_at"
+   ],
+   "properties": {
+    "seq": {
+     "type": "integer",
+     "minimum": 0
+    },
+    "layer": {
+     "enum": [
+      "UI",
+      "API",
+      "SYS"
+     ]
+    },
+    "type": {
+     "enum": [
+      "request",
+      "action",
+      "check",
+      "control",
+      "report"
+     ]
+    },
+    "action": {
+     "type": "string",
+     "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "args": {
+     "type": "object"
+    },
+    "pre": {
+     "type": "object",
+     "description": "FULL store projection; keys must equal store_schema keys"
+    },
+    "post": {
+     "type": "object",
+     "description": "FULL store projection; keys must equal store_schema keys"
+    },
+    "provenance": {
+     "$ref": "#/$defs/provenance"
+    },
+    "observed_at": {
+     "type": "number"
+    },
+    "span_ref": {
+     "type": "string"
+    },
+    "note": {
+     "type": "string"
+    },
+    "txn": {
+     "type": [
+      "integer",
+      "null"
+     ],
+     "description": "Identifier of the gesture transaction this cell belongs to."
+    },
+    "txn_position": {
+     "type": [
+      "integer",
+      "null"
+     ],
+     "description": "Index of this cell within its transaction. Per-cell pre/post inside a transaction is an attribution under a stated convention; only the transaction's own pre/post were measured."
+    },
+    "advanced": {
+     "type": "boolean",
+     "description": "Did this operation advance the residual contract? False = executed but held."
+    },
+    "applied": {
+     "type": "boolean",
+     "description": "Did the environment apply the requested state change? An execution event exists only after the operation crossed the runtime boundary; a pre-execution gate refusal is retained as an intervention/ledger proposal instead. Distinct from 'advanced', which says whether the monitor residual moved. Absent means applied."
+    }
+   },
+   "additionalProperties": false
+  }
+ }
+}

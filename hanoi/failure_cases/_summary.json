@@ -1,0 +1,137 @@
+{
+  "contract": {
+    "artefact_id": "ba7359ae5bf662128e9b5c5f36efec43480b0a9cc9eb8dc58d7f827bb6a76618",
+    "content_hash": "0a43d181271fe80167993e3ef775106348e9ace8ad3513d6fbd6209ff2cc8162",
+    "seed_run": "2026-08-24T192151Z_hanoi3_3cb6a0f11cd0581b442711f1df0a16f2"
+  },
+  "baseline_verdict": "conforms",
+  "passed": 9,
+  "total": 9,
+  "cases": [
+    {
+      "case": "structural",
+      "expected": "STRUCTURAL",
+      "mutation": "a different legal solve, executed rather than edited",
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS",
+        "STRUCTURAL"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "as_expected": true,
+      "n_misalignments": 11
+    },
+    {
+      "case": "guard_pre",
+      "expected": "GUARD_PRE",
+      "mutation": "legal_ac set false at the pre-state of event 3 (move_ac)",
+      "verdict": "violations",
+      "classes": [
+        "GUARD_PRE"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "as_expected": true,
+      "n_misalignments": 1
+    },
+    {
+      "case": "guard_post",
+      "expected": "GUARD_POST",
+      "mutation": "solved set true after event 1, which does not assert it",
+      "verdict": "violations",
+      "classes": [
+        "GUARD_POST"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "as_expected": true,
+      "n_misalignments": 2
+    },
+    {
+      "case": "completeness",
+      "expected": "COMPLETENESS",
+      "mutation": "run truncated to 4 events, ending unsolved",
+      "verdict": "violations",
+      "classes": [
+        "COMPLETENESS"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE"
+      ],
+      "as_expected": true,
+      "n_misalignments": 1
+    },
+    {
+      "case": "continuity",
+      "expected": "CONTINUITY",
+      "mutation": "event 2 pre-state config replaced, chain broken",
+      "verdict": "violations",
+      "classes": [
+        "CONTINUITY"
+      ],
+      "families": [
+        "TRACE_INTEGRITY"
+      ],
+      "as_expected": true,
+      "n_misalignments": 1
+    },
+    {
+      "case": "schema",
+      "expected": "SCHEMA",
+      "mutation": "solved (bool) given the string 'yes'",
+      "verdict": "violations",
+      "classes": [
+        "GUARD_POST",
+        "SCHEMA"
+      ],
+      "families": [
+        "PROCESS_CONFORMANCE",
+        "TRACE_INTEGRITY"
+      ],
+      "as_expected": true,
+      "n_misalignments": 4
+    },
+    {
+      "case": "ledger_mismatch",
+      "expected": "LEDGER_MISMATCH",
+      "mutation": "one classified ledger operation deleted",
+      "verdict": "violations",
+      "classes": [
+        "LEDGER_MISMATCH"
+      ],
+      "families": [
+        "TRACE_INTEGRITY"
+      ],
+      "as_expected": true,
+      "n_misalignments": 1
+    },
+    {
+      "case": "unmediated",
+      "expected": "UNMEDIATED",
+      "mutation": "executed operation appended with no cell",
+      "verdict": "violations",
+      "classes": [
+        "UNMEDIATED"
+      ],
+      "families": [
+        "TRACE_INTEGRITY"
+      ],
+      "as_expected": true,
+      "n_misalignments": 1
+    },
+    {
+      "case": "hold_control",
+      "expected": null,
+      "mutation": "final move recorded unapplied, then retried",
+      "verdict": "conforms",
+      "classes": [],
+      "families": [],
+      "as_expected": true,
+      "n_misalignments": 0
+    }
+  ]
+}

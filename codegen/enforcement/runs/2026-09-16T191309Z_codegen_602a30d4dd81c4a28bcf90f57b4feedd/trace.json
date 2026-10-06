@@ -1,0 +1,343 @@
+{
+  "atf_version": "1.0",
+  "run_id": "2026-09-16T191309Z_codegen_602a30d4dd81c4a28bcf90f57b4feedd",
+  "task": "codegen",
+  "artefact_ref": null,
+  "agent": {
+    "framework": "openai-agents",
+    "model": "gpt-4o"
+  },
+  "store_schema": {
+    "file_exists": "bool",
+    "source_written": "bool",
+    "executed": "bool",
+    "exit_ok": "bool",
+    "test_passed": "bool",
+    "verified": "bool"
+  },
+  "scope": {
+    "entry": "true",
+    "exit_guard": "verified /\\ test_passed"
+  },
+  "provenance_default": "runtime_observed",
+  "started_at": 1789585980.4506383,
+  "harness": "codegen-v1",
+  "direction": "undirected",
+  "unapplied_events_recorded": true,
+  "adapter_version": "codegen/1.0.0",
+  "parallel_tool_calls": false,
+  "prompt_variant": "standard",
+  "spec": {
+    "spec": "title_case_small_words",
+    "filename": "solution.py",
+    "prompt": "Title-case phrases. `solve(phrases)` takes a list of phrases and returns them title-cased: each word starts with a capital letter and the rest of the word is lowercase, EXCEPT that the small words a, an, and, of, the, in, on are entirely lowercase - unless the small word is the first or the last word of the phrase.",
+    "test_input": [
+      "the lord of the rings",
+      "a tale OF two cities",
+      "war and peace",
+      "of mice and men",
+      "what the wind blew in"
+    ],
+    "expected_output": [
+      "The Lord of the Rings",
+      "A Tale of Two Cities",
+      "War and Peace",
+      "Of Mice and Men",
+      "What the Wind Blew In"
+    ]
+  },
+  "agent_instructions": "You are writing and testing a small Python program.\n\nTASK: Title-case phrases. `solve(phrases)` takes a list of phrases and returns them title-cased: each word starts with a capital letter and the rest of the word is lowercase, EXCEPT that the small words a, an, and, of, the, in, on are entirely lowercase - unless the small word is the first or the last word of the phrase.\n\nWrite a function named `solve` in the file `solution.py`. It receives the test input as its only argument and must return the result. Write only the function (and any helpers it needs); the harness supplies the input and captures what it returns.\n\nAvailable operations:\n  create_file      create the file\n  write_source     write Python source into the file\n  execute_program  run the program on the test input\n  verify_result    check the program's result against the expected output\n  report           say that you have finished\n\nCall report when you have finished.",
+  "agent_final_output": "The implementation and testing of the `solve` function are complete. The function successfully title-cases the phrases according to the specified rules.",
+  "runner_outcome": "completed",
+  "determinism_ok": true,
+  "wall_seconds": 10.3,
+  "events": [
+    {
+      "seq": 0,
+      "layer": "SYS",
+      "type": "action",
+      "action": "create_file",
+      "args": {
+        "filename": "solution.py"
+      },
+      "pre": {
+        "file_exists": false,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789585980.4506383
+    },
+    {
+      "seq": 1,
+      "layer": "SYS",
+      "type": "action",
+      "action": "write_source",
+      "args": {
+        "chars": 525
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789585982.4472077
+    },
+    {
+      "seq": 2,
+      "layer": "SYS",
+      "type": "action",
+      "action": "execute_program",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789585986.5188866
+    },
+    {
+      "seq": 3,
+      "layer": "SYS",
+      "type": "action",
+      "action": "verify_result",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789585987.4336057
+    },
+    {
+      "seq": 4,
+      "layer": "SYS",
+      "type": "report",
+      "action": "report",
+      "args": {
+        "note": "The solution has been implemented and verified successfully."
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "applied": true,
+      "note": "ok",
+      "observed_at": 1789585988.7961931
+    }
+  ],
+  "operation_ledger": [
+    {
+      "operation_seq": 0,
+      "kind": "create_file",
+      "cell": "create_file",
+      "args": {
+        "filename": "solution.py"
+      },
+      "pre": {
+        "file_exists": false,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789585980.4457343,
+      "post": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 1,
+      "kind": "write_source",
+      "cell": "write_source",
+      "args": {
+        "chars": 525
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": false,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789585982.444625,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 2,
+      "kind": "execute_program",
+      "cell": "execute_program",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": false,
+        "exit_ok": false,
+        "test_passed": false,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789585986.2716138,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 3,
+      "kind": "verify_result",
+      "cell": "verify_result",
+      "args": {},
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": false
+      },
+      "executed": true,
+      "observed_at": 1789585987.4335945,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "outcome": "executed"
+    },
+    {
+      "operation_seq": 4,
+      "kind": "report",
+      "cell": "report",
+      "args": {
+        "note": "The solution has been implemented and verified successfully."
+      },
+      "pre": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "executed": true,
+      "observed_at": 1789585988.796182,
+      "post": {
+        "file_exists": true,
+        "source_written": true,
+        "executed": true,
+        "exit_ok": true,
+        "test_passed": true,
+        "verified": true
+      },
+      "outcome": "executed"
+    }
+  ],
+  "interventions": [],
+  "final_state": {
+    "file_exists": true,
+    "source_written": true,
+    "executed": true,
+    "exit_ok": true,
+    "test_passed": true,
+    "verified": true
+  },
+  "final_source": "def title_case_word(word, is_first_or_last):\n    small_words = {'a', 'an', 'and', 'of', 'the', 'in', 'on'}\n    if word.lower() in small_words and not is_first_or_last:\n        return word.lower()\n    return word.capitalize()\n\ndef solve(phrases):\n    result = []\n    for phrase in phrases:\n        words = phrase.split()\n        title_cased = [\n            title_case_word(word, i == 0 or i == len(words) - 1)\n            for i, word in enumerate(words)\n        ]\n        result.append(' '.join(title_cased))\n    return result",
+  "final_stdout": "[\"The Lord of the Rings\", \"A Tale of Two Cities\", \"War and Peace\", \"Of Mice and Men\", \"What the Wind Blew In\"]\n",
+  "final_stderr": "",
+  "env_stats": {
+    "applied": 5,
+    "rejected_by_world": 0,
+    "interventions": 0,
+    "attempted_operations": 5
+  }
+}

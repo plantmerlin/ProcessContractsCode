@@ -1,0 +1,91 @@
+run   spec                      ev  eligible
+0c81  bubble_sort                5  yes  eligible
+42d5  bubble_sort                5  yes  eligible
+901a  bubble_sort                5  yes  eligible
+a74c  bubble_sort                5  yes  eligible
+0cd4  binary_insertion_sort      5  yes  eligible
+deda  binary_insertion_sort      5  yes  eligible
+4347  binary_insertion_sort      5  yes  eligible
+a218  binary_insertion_sort      5  yes  eligible
+f1ab  fizzbuzz                   5  yes  eligible
+0d82  fizzbuzz                   5  yes  eligible
+6d9b  fizzbuzz                   5  yes  eligible
+e0cd  fizzbuzz                   5  yes  eligible
+297e  run_length_encoding        5  yes  eligible
+54e4  run_length_encoding        5  yes  eligible
+984e  run_length_encoding        5  yes  eligible
+3615  run_length_encoding        5  yes  eligible
+6467  bubble_sort                5  no   not an undirected run
+ed84  bubble_sort                5  no   not an undirected run
+ecbc  bubble_sort                5  no   not an undirected run
+a8a8  bubble_sort                5  no   not an undirected run
+4eca  bubble_sort                5  no   not an undirected run
+0f85  binary_insertion_sort      5  no   not an undirected run
+2602  binary_insertion_sort      5  no   not an undirected run
+710f  binary_insertion_sort      5  no   not an undirected run
+0c68  binary_insertion_sort      5  no   not an undirected run
+b4aa  binary_insertion_sort      5  no   not an undirected run
+002b  fizzbuzz                   5  no   not an undirected run
+064f  fizzbuzz                   5  no   not an undirected run
+f6f6  fizzbuzz                   5  no   not an undirected run
+07d6  fizzbuzz                   5  no   not an undirected run
+a073  fizzbuzz                   5  no   not an undirected run
+28ec  run_length_encoding        5  no   not an undirected run
+5364  run_length_encoding        5  no   not an undirected run
+bf99  run_length_encoding        5  no   not an undirected run
+51ce  run_length_encoding        5  no   not an undirected run
+a4a2  run_length_encoding        5  no   not an undirected run
+42b3  balanced_brackets          5  yes  eligible
+d90f  balanced_brackets          5  yes  eligible
+17c8  balanced_brackets          5  yes  eligible
+85c3  balanced_brackets          5  yes  eligible
+9d84  count_islands              5  yes  eligible
+0173  count_islands              5  yes  eligible
+a380  count_islands              5  yes  eligible
+6998  count_islands              5  yes  eligible
+adea  order_totals               5  yes  eligible
+5df4  order_totals               5  yes  eligible
+b2b4  order_totals               5  yes  eligible
+44f2  order_totals               5  yes  eligible
+ae56  balanced_brackets          5  no   not an undirected run
+c532  balanced_brackets          5  no   not an undirected run
+0860  balanced_brackets          5  no   not an undirected run
+54e9  balanced_brackets          5  no   not an undirected run
+d777  balanced_brackets          5  no   not an undirected run
+aa92  count_islands              5  no   not an undirected run
+0610  count_islands              5  no   not an undirected run
+6673  count_islands              5  no   not an undirected run
+d16b  count_islands              5  no   not an undirected run
+52ad  count_islands              5  no   not an undirected run
+7e07  order_totals               5  no   not an undirected run
+289f  order_totals               5  no   not an undirected run
+07ac  order_totals               5  no   not an undirected run
+d234  order_totals               5  no   not an undirected run
+513a  order_totals               5  no   not an undirected run
+
+seed: 2026-09-16T142914Z_codegen_57e473a2488898277dc7d673c7910c81  spec=bubble_sort
+   seq0 create_file
+   seq1 write_source
+   seq2 execute_program
+   seq3 verify_result
+   seq4 report
+
+seed self-verification: conforms (0 misalignments)
+
+contract -> cross_task\artefacts\codegen.adf.json
+  artefact_id  50bfde761acc
+  content_hash ea20f7eef09c
+   <true           > create_file      <file_exists:=true>
+   <file_exists    > write_source     <source_written:=true>
+   <source_written > execute_program  <executed:=true /\ exit_ok:=true /\ test_passed:=true>
+   <executed       > verify_result    <verified:=true>
+   <verified       > report           <tau>
+
+P-invariance: inducing from the latest eligible run of each spec
+   balanced_brackets        from 85c3  identical P: YES   same artefact_id: YES
+   binary_insertion_sort    from a218  identical P: YES   same artefact_id: YES
+   bubble_sort              from a74c  identical P: YES   same artefact_id: YES
+   count_islands            from 6998  identical P: YES   same artefact_id: YES
+   fizzbuzz                 from e0cd  identical P: YES   same artefact_id: YES
+   order_totals             from 44f2  identical P: YES   same artefact_id: YES
+   run_length_encoding      from 3615  identical P: YES   same artefact_id: YES

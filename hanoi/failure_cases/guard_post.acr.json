@@ -1,0 +1,29 @@
+{
+  "acr_version": "1.0",
+  "run_id": "FAILURECASE_guard_post",
+  "artefact_id": "ba7359ae5bf662128e9b5c5f36efec43480b0a9cc9eb8dc58d7f827bb6a76618",
+  "artefact_version": "1.0.0",
+  "verdict": "violations",
+  "trace_integrity": "pass",
+  "process_conformance": "fail",
+  "misalignments": [
+    {
+      "seq": 1,
+      "class": "GUARD_POST",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "'move_ab' leaves solved unchanged(false)",
+      "observed": "solved=true"
+    },
+    {
+      "seq": 2,
+      "class": "GUARD_POST",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "'move_cb' leaves solved unchanged(true)",
+      "observed": "solved=false"
+    }
+  ],
+  "completeness": {
+    "result": "full"
+  },
+  "checked_at": 1787599855.2690299
+}

@@ -1,0 +1,69 @@
+{
+ "task": "codegen",
+ "adapter_version": "codegen/1.0.0",
+ "store_schema": {
+  "file_exists": "bool",
+  "source_written": "bool",
+  "executed": "bool",
+  "exit_ok": "bool",
+  "test_passed": "bool",
+  "verified": "bool"
+ },
+ "cell_schema": {
+  "create_file": {
+   "type": "action",
+   "layer": "SYS",
+   "group": "build",
+   "reads": []
+  },
+  "write_source": {
+   "type": "action",
+   "layer": "SYS",
+   "group": "build",
+   "reads": [
+    "file_exists"
+   ],
+   "pre_override": "file_exists"
+  },
+  "execute_program": {
+   "type": "action",
+   "layer": "SYS",
+   "group": "build",
+   "reads": [
+    "source_written"
+   ],
+   "pre_override": "source_written"
+  },
+  "verify_result": {
+   "type": "action",
+   "layer": "SYS",
+   "group": "build",
+   "reads": [
+    "executed"
+   ],
+   "pre_override": "executed"
+  },
+  "report": {
+   "type": "report",
+   "layer": "SYS",
+   "group": "finish",
+   "reads": [
+    "verified"
+   ],
+   "pre_override": "verified"
+  }
+ },
+ "scope": {
+  "entry": "true",
+  "exit_guard": "verified /\\ test_passed"
+ },
+ "initial_store": {
+  "file_exists": false,
+  "source_written": false,
+  "executed": false,
+  "exit_ok": false,
+  "test_passed": false,
+  "verified": false
+ },
+ "note": "ONE contract for every spec. Process: create_file -> write_source -> execute_program -> verify_result -> report. The program written is not checked; correctness enters only as test_passed."
+}

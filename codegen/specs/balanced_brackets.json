@@ -1,0 +1,25 @@
+{
+ "spec": "balanced_brackets",
+ "filename": "solution.py",
+ "prompt": "Check bracket balance. `solve(strings)` takes a list of strings made of the characters ()[]{} and returns a list of booleans, one per string: true if every bracket is closed by the matching type in the correct order, false otherwise. The empty string is balanced.",
+ "test_input": [
+  "()",
+  "([]{})",
+  "(]",
+  "((())",
+  "{[()()]}",
+  "",
+  "([)]",
+  "}{"
+ ],
+ "expected_output": [
+  true,
+  true,
+  false,
+  false,
+  true,
+  true,
+  false,
+  false
+ ]
+}

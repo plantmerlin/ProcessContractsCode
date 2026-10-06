@@ -1,0 +1,150 @@
+{
+ "task": "hanoi3",
+ "adapter_version": "hanoi/1.0.0",
+ "disks": 3,
+ "goal_peg": "C",
+ "store_schema": {
+  "legal_ab": "bool",
+  "legal_ac": "bool",
+  "legal_ba": "bool",
+  "legal_bc": "bool",
+  "legal_ca": "bool",
+  "legal_cb": "bool",
+  "config": "string",
+  "solved": "bool"
+ },
+ "cell_schema": {
+  "move_ab": {
+   "type": "action",
+   "layer": "SYS",
+   "group": "solve",
+   "reads": [
+    "legal_ab"
+   ],
+   "pre_override": "legal_ab",
+   "post_unconstrained": [
+    "legal_ab",
+    "legal_ac",
+    "legal_ba",
+    "legal_bc",
+    "legal_ca",
+    "legal_cb",
+    "config"
+   ]
+  },
+  "move_ac": {
+   "type": "action",
+   "layer": "SYS",
+   "group": "solve",
+   "reads": [
+    "legal_ac"
+   ],
+   "pre_override": "legal_ac",
+   "post_unconstrained": [
+    "legal_ab",
+    "legal_ac",
+    "legal_ba",
+    "legal_bc",
+    "legal_ca",
+    "legal_cb",
+    "config"
+   ]
+  },
+  "move_ba": {
+   "type": "action",
+   "layer": "SYS",
+   "group": "solve",
+   "reads": [
+    "legal_ba"
+   ],
+   "pre_override": "legal_ba",
+   "post_unconstrained": [
+    "legal_ab",
+    "legal_ac",
+    "legal_ba",
+    "legal_bc",
+    "legal_ca",
+    "legal_cb",
+    "config"
+   ]
+  },
+  "move_bc": {
+   "type": "action",
+   "layer": "SYS",
+   "group": "solve",
+   "reads": [
+    "legal_bc"
+   ],
+   "pre_override": "legal_bc",
+   "post_unconstrained": [
+    "legal_ab",
+    "legal_ac",
+    "legal_ba",
+    "legal_bc",
+    "legal_ca",
+    "legal_cb",
+    "config"
+   ]
+  },
+  "move_ca": {
+   "type": "action",
+   "layer": "SYS",
+   "group": "solve",
+   "reads": [
+    "legal_ca"
+   ],
+   "pre_override": "legal_ca",
+   "post_unconstrained": [
+    "legal_ab",
+    "legal_ac",
+    "legal_ba",
+    "legal_bc",
+    "legal_ca",
+    "legal_cb",
+    "config"
+   ]
+  },
+  "move_cb": {
+   "type": "action",
+   "layer": "SYS",
+   "group": "solve",
+   "reads": [
+    "legal_cb"
+   ],
+   "pre_override": "legal_cb",
+   "post_unconstrained": [
+    "legal_ab",
+    "legal_ac",
+    "legal_ba",
+    "legal_bc",
+    "legal_ca",
+    "legal_cb",
+    "config"
+   ]
+  },
+  "report": {
+   "type": "report",
+   "layer": "SYS",
+   "group": "finish",
+   "reads": [
+    "solved"
+   ],
+   "pre_override": "solved"
+  }
+ },
+ "scope": {
+  "entry": "true",
+  "exit_guard": "solved"
+ },
+ "initial_store": {
+  "legal_ab": true,
+  "legal_ac": true,
+  "legal_ba": false,
+  "legal_bc": false,
+  "legal_ca": false,
+  "legal_cb": false,
+  "config": "321|-|-",
+  "solved": false
+ },
+ "note": "OPTION 1 \u2014 the contract is a RECORDING. P is the straight-line cell sequence of the seed run; conformance means replicating it. Move cells release the configuration and the legality predicates because those are what the ENVIRONMENT decides; the contract constrains the agent choices and the guards under which they were permitted."
+}

@@ -1,0 +1,22 @@
+{
+  "acr_version": "1.0",
+  "run_id": "FAILURECASE_ledger_mismatch",
+  "artefact_id": "ba7359ae5bf662128e9b5c5f36efec43480b0a9cc9eb8dc58d7f827bb6a76618",
+  "artefact_version": "1.0.0",
+  "verdict": "violations",
+  "trace_integrity": "fail",
+  "process_conformance": "pass",
+  "misalignments": [
+    {
+      "seq": -1,
+      "class": "LEDGER_MISMATCH",
+      "family": "TRACE_INTEGRITY",
+      "expected": "executed classified operations equal recorded events (7)",
+      "observed": "recorded 8: ['move_ac', 'move_ab', 'move_cb', 'move_ac', 'move_ba', 'move_bc', 'move_ac', 'report'] vs executed ['move_ab', 'move_cb', 'move_ac', 'move_ba', 'move_bc', 'move_ac', 'report']"
+    }
+  ],
+  "completeness": {
+    "result": "full"
+  },
+  "checked_at": 1787599855.28106
+}

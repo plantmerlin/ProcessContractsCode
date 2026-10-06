@@ -1,0 +1,23 @@
+{
+  "acr_version": "1.0",
+  "run_id": "FAILURECASE_completeness",
+  "artefact_id": "ba7359ae5bf662128e9b5c5f36efec43480b0a9cc9eb8dc58d7f827bb6a76618",
+  "artefact_version": "1.0.0",
+  "verdict": "violations",
+  "trace_integrity": "pass",
+  "process_conformance": "fail",
+  "misalignments": [
+    {
+      "seq": -1,
+      "class": "COMPLETENESS",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "termination with exit guard 'solved'",
+      "observed": "process not at SKIP"
+    }
+  ],
+  "completeness": {
+    "result": "partial",
+    "reason": "exit_guard_unsatisfied"
+  },
+  "checked_at": 1787599855.2717853
+}

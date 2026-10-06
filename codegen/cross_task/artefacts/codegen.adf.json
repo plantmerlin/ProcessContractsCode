@@ -1,0 +1,164 @@
+{
+  "adf_version": "1.0",
+  "artefact_id": "50bfde761acc5ece8c8e4f65a2838419f3a9e312bddb56916e3df9fffbfec178",
+  "task_params": null,
+  "adapter_version": "codegen/1.0.0",
+  "name": "codegen",
+  "version": "1.0.0",
+  "created_from_run": "2026-09-16T142914Z_codegen_57e473a2488898277dc7d673c7910c81",
+  "store_schema": {
+    "file_exists": "bool",
+    "source_written": "bool",
+    "executed": "bool",
+    "exit_ok": "bool",
+    "test_passed": "bool",
+    "verified": "bool"
+  },
+  "cell_schema": {
+    "create_file": {
+      "type": "action",
+      "layer": "SYS",
+      "reads": [],
+      "group": "build"
+    },
+    "write_source": {
+      "type": "action",
+      "layer": "SYS",
+      "reads": [
+        "file_exists"
+      ],
+      "group": "build"
+    },
+    "execute_program": {
+      "type": "action",
+      "layer": "SYS",
+      "reads": [
+        "source_written"
+      ],
+      "group": "build"
+    },
+    "verify_result": {
+      "type": "action",
+      "layer": "SYS",
+      "reads": [
+        "executed"
+      ],
+      "group": "build"
+    },
+    "report": {
+      "type": "report",
+      "layer": "SYS",
+      "reads": [
+        "verified",
+        "test_passed"
+      ],
+      "group": "finish"
+    }
+  },
+  "scope": {
+    "entry": "true",
+    "exit_guard": "verified /\\ test_passed"
+  },
+  "alpha": {
+    "projection_fields": [
+      "file_exists",
+      "source_written",
+      "executed",
+      "exit_ok",
+      "test_passed",
+      "verified"
+    ],
+    "quotient": [],
+    "naming_actual": "declared-groups(no surface S)",
+    "initial_store": {
+      "file_exists": false,
+      "source_written": false,
+      "executed": false,
+      "exit_ok": false,
+      "test_passed": false,
+      "verified": false
+    }
+  },
+  "semantics": {
+    "version": "1.0.0",
+    "hold_budget": 6
+  },
+  "P": {
+    "op": "seq",
+    "children": [
+      {
+        "op": "call",
+        "name": "build",
+        "cells": [
+          {
+            "op": "cell",
+            "action": "create_file",
+            "type": "action",
+            "reads": [],
+            "pre": "true",
+            "post": "file_exists:=true"
+          },
+          {
+            "op": "cell",
+            "action": "write_source",
+            "type": "action",
+            "reads": [
+              "file_exists"
+            ],
+            "pre": "file_exists",
+            "post": "source_written:=true"
+          },
+          {
+            "op": "cell",
+            "action": "execute_program",
+            "type": "action",
+            "reads": [
+              "source_written"
+            ],
+            "pre": "source_written",
+            "post": "executed:=true /\\ exit_ok:=true /\\ test_passed:=true"
+          },
+          {
+            "op": "cell",
+            "action": "verify_result",
+            "type": "action",
+            "reads": [
+              "executed"
+            ],
+            "pre": "executed",
+            "post": "verified:=true"
+          }
+        ]
+      },
+      {
+        "op": "call",
+        "name": "finish",
+        "cells": [
+          {
+            "op": "cell",
+            "action": "report",
+            "type": "report",
+            "reads": [
+              "verified",
+              "test_passed"
+            ],
+            "pre": "verified",
+            "post": "tau"
+          }
+        ]
+      },
+      {
+        "op": "skip"
+      }
+    ]
+  },
+  "external_choices": [],
+  "internal_choices": [],
+  "signoff": {
+    "status": "signed",
+    "note": "One contract for every code-creation spec. Induced from a bubble_sort run."
+  },
+  "provenance": "runtime_observed",
+  "translator_version": "1.3.0",
+  "content_hash": "ea20f7eef09c4cd56fcf29233ef2df8f705641476f6320c8992a2acb7b101ace"
+}

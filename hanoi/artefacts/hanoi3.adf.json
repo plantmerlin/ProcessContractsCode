@@ -1,0 +1,335 @@
+{
+  "adf_version": "1.0",
+  "artefact_id": "ba7359ae5bf662128e9b5c5f36efec43480b0a9cc9eb8dc58d7f827bb6a76618",
+  "task_params": null,
+  "adapter_version": "hanoi/1.0.0",
+  "name": "hanoi3",
+  "version": "1.0.0",
+  "created_from_run": "2026-08-24T192151Z_hanoi3_3cb6a0f11cd0581b442711f1df0a16f2",
+  "store_schema": {
+    "legal_ab": "bool",
+    "legal_ac": "bool",
+    "legal_ba": "bool",
+    "legal_bc": "bool",
+    "legal_ca": "bool",
+    "legal_cb": "bool",
+    "config": "string",
+    "solved": "bool"
+  },
+  "cell_schema": {
+    "move_ab": {
+      "type": "action",
+      "layer": "SYS",
+      "reads": [
+        "legal_ab"
+      ],
+      "group": "solve",
+      "post_unconstrained": [
+        "legal_ab",
+        "legal_ac",
+        "legal_ba",
+        "legal_bc",
+        "legal_ca",
+        "legal_cb",
+        "config"
+      ]
+    },
+    "move_ac": {
+      "type": "action",
+      "layer": "SYS",
+      "reads": [
+        "legal_ac"
+      ],
+      "group": "solve",
+      "post_unconstrained": [
+        "legal_ab",
+        "legal_ac",
+        "legal_ba",
+        "legal_bc",
+        "legal_ca",
+        "legal_cb",
+        "config"
+      ]
+    },
+    "move_ba": {
+      "type": "action",
+      "layer": "SYS",
+      "reads": [
+        "legal_ba"
+      ],
+      "group": "solve",
+      "post_unconstrained": [
+        "legal_ab",
+        "legal_ac",
+        "legal_ba",
+        "legal_bc",
+        "legal_ca",
+        "legal_cb",
+        "config"
+      ]
+    },
+    "move_bc": {
+      "type": "action",
+      "layer": "SYS",
+      "reads": [
+        "legal_bc"
+      ],
+      "group": "solve",
+      "post_unconstrained": [
+        "legal_ab",
+        "legal_ac",
+        "legal_ba",
+        "legal_bc",
+        "legal_ca",
+        "legal_cb",
+        "config"
+      ]
+    },
+    "move_ca": {
+      "type": "action",
+      "layer": "SYS",
+      "reads": [
+        "legal_ca"
+      ],
+      "group": "solve",
+      "post_unconstrained": [
+        "legal_ab",
+        "legal_ac",
+        "legal_ba",
+        "legal_bc",
+        "legal_ca",
+        "legal_cb",
+        "config"
+      ]
+    },
+    "move_cb": {
+      "type": "action",
+      "layer": "SYS",
+      "reads": [
+        "legal_cb"
+      ],
+      "group": "solve",
+      "post_unconstrained": [
+        "legal_ab",
+        "legal_ac",
+        "legal_ba",
+        "legal_bc",
+        "legal_ca",
+        "legal_cb",
+        "config"
+      ]
+    },
+    "report": {
+      "type": "report",
+      "layer": "SYS",
+      "reads": [
+        "solved"
+      ],
+      "group": "finish"
+    }
+  },
+  "scope": {
+    "entry": "true",
+    "exit_guard": "solved"
+  },
+  "alpha": {
+    "projection_fields": [
+      "legal_ab",
+      "legal_ac",
+      "legal_ba",
+      "legal_bc",
+      "legal_ca",
+      "legal_cb",
+      "config",
+      "solved"
+    ],
+    "quotient": [],
+    "naming_actual": "declared-groups(no surface S)",
+    "initial_store": {
+      "legal_ab": true,
+      "legal_ac": true,
+      "legal_ba": false,
+      "legal_bc": false,
+      "legal_ca": false,
+      "legal_cb": false,
+      "config": "321|-|-",
+      "solved": false
+    }
+  },
+  "semantics": {
+    "version": "1.0.0",
+    "hold_budget": 6
+  },
+  "P": {
+    "op": "seq",
+    "children": [
+      {
+        "op": "call",
+        "name": "solve",
+        "cells": [
+          {
+            "op": "cell",
+            "action": "move_ac",
+            "type": "action",
+            "reads": [
+              "legal_ac"
+            ],
+            "pre": "legal_ac",
+            "post": "tau",
+            "unconstrained": [
+              "legal_ab",
+              "legal_ac",
+              "legal_ba",
+              "legal_bc",
+              "legal_ca",
+              "legal_cb",
+              "config"
+            ]
+          },
+          {
+            "op": "cell",
+            "action": "move_ab",
+            "type": "action",
+            "reads": [
+              "legal_ab"
+            ],
+            "pre": "legal_ab",
+            "post": "tau",
+            "unconstrained": [
+              "legal_ab",
+              "legal_ac",
+              "legal_ba",
+              "legal_bc",
+              "legal_ca",
+              "legal_cb",
+              "config"
+            ]
+          },
+          {
+            "op": "cell",
+            "action": "move_cb",
+            "type": "action",
+            "reads": [
+              "legal_cb"
+            ],
+            "pre": "legal_cb",
+            "post": "tau",
+            "unconstrained": [
+              "legal_ab",
+              "legal_ac",
+              "legal_ba",
+              "legal_bc",
+              "legal_ca",
+              "legal_cb",
+              "config"
+            ]
+          },
+          {
+            "op": "cell",
+            "action": "move_ac",
+            "type": "action",
+            "reads": [
+              "legal_ac"
+            ],
+            "pre": "legal_ac",
+            "post": "tau",
+            "unconstrained": [
+              "legal_ab",
+              "legal_ac",
+              "legal_ba",
+              "legal_bc",
+              "legal_ca",
+              "legal_cb",
+              "config"
+            ]
+          },
+          {
+            "op": "cell",
+            "action": "move_ba",
+            "type": "action",
+            "reads": [
+              "legal_ba"
+            ],
+            "pre": "legal_ba",
+            "post": "tau",
+            "unconstrained": [
+              "legal_ab",
+              "legal_ac",
+              "legal_ba",
+              "legal_bc",
+              "legal_ca",
+              "legal_cb",
+              "config"
+            ]
+          },
+          {
+            "op": "cell",
+            "action": "move_bc",
+            "type": "action",
+            "reads": [
+              "legal_bc"
+            ],
+            "pre": "legal_bc",
+            "post": "tau",
+            "unconstrained": [
+              "legal_ab",
+              "legal_ac",
+              "legal_ba",
+              "legal_bc",
+              "legal_ca",
+              "legal_cb",
+              "config"
+            ]
+          },
+          {
+            "op": "cell",
+            "action": "move_ac",
+            "type": "action",
+            "reads": [
+              "legal_ac"
+            ],
+            "pre": "legal_ac",
+            "post": "solved:=true",
+            "unconstrained": [
+              "legal_ab",
+              "legal_ac",
+              "legal_ba",
+              "legal_bc",
+              "legal_ca",
+              "legal_cb",
+              "config"
+            ]
+          }
+        ]
+      },
+      {
+        "op": "call",
+        "name": "finish",
+        "cells": [
+          {
+            "op": "cell",
+            "action": "report",
+            "type": "report",
+            "reads": [
+              "solved"
+            ],
+            "pre": "solved",
+            "post": "tau"
+          }
+        ]
+      },
+      {
+        "op": "skip"
+      }
+    ]
+  },
+  "external_choices": [],
+  "internal_choices": [],
+  "signoff": {
+    "status": "signed",
+    "note": "Option 1 — the contract is a recording of the seed run. Move cells release the configuration and the legality predicates, which the environment decides."
+  },
+  "provenance": "runtime_observed",
+  "translator_version": "1.3.0",
+  "content_hash": "0a43d181271fe80167993e3ef775106348e9ace8ad3513d6fbd6209ff2cc8162"
+}

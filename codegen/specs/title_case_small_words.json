@@ -1,0 +1,19 @@
+{
+ "spec": "title_case_small_words",
+ "filename": "solution.py",
+ "prompt": "Title-case phrases. `solve(phrases)` takes a list of phrases and returns them title-cased: each word starts with a capital letter and the rest of the word is lowercase, EXCEPT that the small words a, an, and, of, the, in, on are entirely lowercase - unless the small word is the first or the last word of the phrase.",
+ "test_input": [
+  "the lord of the rings",
+  "a tale OF two cities",
+  "war and peace",
+  "of mice and men",
+  "what the wind blew in"
+ ],
+ "expected_output": [
+  "The Lord of the Rings",
+  "A Tale of Two Cities",
+  "War and Peace",
+  "Of Mice and Men",
+  "What the Wind Blew In"
+ ]
+}

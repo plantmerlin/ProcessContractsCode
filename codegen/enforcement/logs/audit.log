@@ -1,0 +1,58 @@
+contract 50bfde761acc content ea20f7eef09c seed 0c81
+
+run  spec                   arm         ev rej  iv test verdict     classes
+f191 fizzbuzz               undirected   4   0   0 PASS violations COMPLETENESS,STRUCTURAL
+49e6 fizzbuzz               undirected   4   0   0 PASS violations COMPLETENESS,STRUCTURAL
+1f02 fizzbuzz               undirected   4   0   0 PASS violations COMPLETENESS,STRUCTURAL
+e46a fizzbuzz               enforced     3   0   1 PASS violations COMPLETENESS
+f8ae fizzbuzz               enforced     3   0   1 PASS violations COMPLETENESS
+ac2c fizzbuzz               enforced     3   0   1 PASS violations COMPLETENESS
+1dab count_islands          undirected   4   0   0 PASS violations COMPLETENESS,STRUCTURAL
+a555 count_islands          undirected   4   0   0 PASS violations COMPLETENESS,STRUCTURAL
+7512 count_islands          undirected   4   0   0 PASS violations COMPLETENESS,STRUCTURAL
+d9bd count_islands          enforced     3   0   1 PASS violations COMPLETENESS
+ba6f count_islands          enforced     3   0   1 PASS violations COMPLETENESS
+0690 count_islands          enforced     3   0   1 PASS violations COMPLETENESS
+caa1 round_half_away        undirected   4   0   0 fail violations COMPLETENESS,STRUCTURAL
+b175 round_half_away        undirected   5   0   0 PASS conforms   
+1a76 round_half_away        undirected   5   0   0 PASS conforms   
+3620 round_half_away        undirected   5   0   0 PASS conforms   
+ad98 round_half_away        undirected   5   0   0 PASS conforms   
+93c9 round_half_away        enforced     5   0   0 PASS conforms   
+30f8 round_half_away        enforced     5   0   0 PASS conforms   
+5cda round_half_away        enforced     5   0   0 PASS conforms   
+77ff round_half_away        enforced     5   0   0 PASS conforms   
+f30b round_half_away        enforced     5   0   0 PASS conforms   
+cec5 title_case_small_words undirected   5   0   0 PASS conforms   
+d6f0 title_case_small_words undirected   8   0   0 PASS violations STRUCTURAL
+eedd title_case_small_words undirected   5   0   0 PASS conforms   
+2dd2 title_case_small_words undirected   5   0   0 PASS conforms   
+fa21 title_case_small_words undirected   5   0   0 PASS conforms   
+143a title_case_small_words enforced     5   0   0 PASS conforms   
+119d title_case_small_words enforced     5   0   0 PASS conforms   
+2729 title_case_small_words enforced     5   0   0 PASS conforms   
+9680 title_case_small_words enforced     5   0   0 PASS conforms   
+6d90 title_case_small_words enforced     5   0   0 PASS conforms   
+1c9d title_case_small_words enforced     5   0   0 PASS conforms   
+c965 title_case_small_words enforced     5   0   0 PASS conforms   
+6cde title_case_small_words enforced     5   0   0 PASS conforms   
+ee93 title_case_small_words enforced     5   0   0 PASS conforms   
+d290 title_case_small_words enforced     5   0   0 PASS conforms   
+990d fizzbuzz               enforced     5   0   1 PASS conforms   
+1837 fizzbuzz               enforced     5   0   1 PASS conforms   
+ab6e fizzbuzz               enforced     5   0   1 PASS conforms   
+6d3c count_islands          enforced     5   0   1 PASS conforms   
+f782 count_islands          enforced     5   0   1 PASS conforms   
+87aa count_islands          enforced     5   0   1 PASS conforms   
+
+spec                   arm          n  conform  test pass&nonconf   iv
+count_islands          enforced     6     3/6    6/6        3        6
+fizzbuzz               enforced     6     3/6    6/6        3        6
+round_half_away        enforced     5     5/5    5/5        0        0
+title_case_small_words enforced    10    10/10  10/10       0        0
+count_islands          undirected   3     0/3    3/3        3        0
+fizzbuzz               undirected   3     0/3    3/3        3        0
+round_half_away        undirected   5     4/5    4/5        0        0
+title_case_small_words undirected   5     4/5    5/5        1        0
+
+43 ACRs -> enforcement\reports

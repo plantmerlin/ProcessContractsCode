@@ -1,0 +1,309 @@
+{
+  "acr_version": "1.0",
+  "run_id": "2026-08-24T192022Z_hanoi3_7240c6f8ac686dbbd60c7a2962887981",
+  "artefact_id": "ba7359ae5bf662128e9b5c5f36efec43480b0a9cc9eb8dc58d7f827bb6a76618",
+  "artefact_version": "1.0.0",
+  "verdict": "violations",
+  "trace_integrity": "fail",
+  "process_conformance": "fail",
+  "misalignments": [
+    {
+      "seq": 0,
+      "class": "UNMEDIATED",
+      "family": "TRACE_INTEGRITY",
+      "expected": "every executed operation classifies to a cell",
+      "observed": "'move' executed unclassified"
+    },
+    {
+      "seq": 2,
+      "class": "UNMEDIATED",
+      "family": "TRACE_INTEGRITY",
+      "expected": "every executed operation classifies to a cell",
+      "observed": "'move' executed unclassified"
+    },
+    {
+      "seq": 6,
+      "class": "UNMEDIATED",
+      "family": "TRACE_INTEGRITY",
+      "expected": "every executed operation classifies to a cell",
+      "observed": "'move' executed unclassified"
+    },
+    {
+      "seq": 8,
+      "class": "UNMEDIATED",
+      "family": "TRACE_INTEGRITY",
+      "expected": "every executed operation classifies to a cell",
+      "observed": "'move' executed unclassified"
+    },
+    {
+      "seq": 11,
+      "class": "UNMEDIATED",
+      "family": "TRACE_INTEGRITY",
+      "expected": "every executed operation classifies to a cell",
+      "observed": "'move' executed unclassified"
+    },
+    {
+      "seq": 12,
+      "class": "UNMEDIATED",
+      "family": "TRACE_INTEGRITY",
+      "expected": "every executed operation classifies to a cell",
+      "observed": "'move' executed unclassified"
+    },
+    {
+      "seq": 20,
+      "class": "UNMEDIATED",
+      "family": "TRACE_INTEGRITY",
+      "expected": "every executed operation classifies to a cell",
+      "observed": "'move' executed unclassified"
+    },
+    {
+      "seq": 22,
+      "class": "UNMEDIATED",
+      "family": "TRACE_INTEGRITY",
+      "expected": "every executed operation classifies to a cell",
+      "observed": "'move' executed unclassified"
+    },
+    {
+      "seq": 32,
+      "class": "UNMEDIATED",
+      "family": "TRACE_INTEGRITY",
+      "expected": "every executed operation classifies to a cell",
+      "observed": "'move' executed unclassified"
+    },
+    {
+      "seq": 35,
+      "class": "UNMEDIATED",
+      "family": "TRACE_INTEGRITY",
+      "expected": "every executed operation classifies to a cell",
+      "observed": "'move' executed unclassified"
+    },
+    {
+      "seq": 0,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 2,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ab",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 3,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ab",
+      "observed": "'move_cb' occurred (not offered here)"
+    },
+    {
+      "seq": 4,
+      "class": "GUARD_PRE",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "<legal_ab> before 'move_ab'",
+      "observed": "legal_ab=false"
+    },
+    {
+      "seq": 5,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ab",
+      "observed": "'move_ba' occurred (not offered here)"
+    },
+    {
+      "seq": 6,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ab",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 7,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ab",
+      "observed": "'move_ac' occurred (not offered here)"
+    },
+    {
+      "seq": 8,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ab",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 9,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ab",
+      "observed": "'move_cb' occurred (not offered here)"
+    },
+    {
+      "seq": 10,
+      "class": "GUARD_PRE",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "<legal_ab> before 'move_ab'",
+      "observed": "legal_ab=false"
+    },
+    {
+      "seq": 11,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ab",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 12,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ab",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 13,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ab",
+      "observed": "'move_bc' occurred (not offered here)"
+    },
+    {
+      "seq": 15,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_cb",
+      "observed": "'move_ac' occurred (not offered here)"
+    },
+    {
+      "seq": 17,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_bc' occurred (not offered here)"
+    },
+    {
+      "seq": 18,
+      "class": "GUARD_PRE",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "<legal_ac> before 'move_ac'",
+      "observed": "legal_ac=false"
+    },
+    {
+      "seq": 19,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_ba' occurred (not offered here)"
+    },
+    {
+      "seq": 20,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 21,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_cb' occurred (not offered here)"
+    },
+    {
+      "seq": 22,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 24,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ba",
+      "observed": "'move_bc' occurred (not offered here)"
+    },
+    {
+      "seq": 25,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ba",
+      "observed": "'move_ac' occurred (not offered here)"
+    },
+    {
+      "seq": 26,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ba",
+      "observed": "'move_cb' occurred (not offered here)"
+    },
+    {
+      "seq": 27,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ba",
+      "observed": "'move_cb' occurred (not offered here)"
+    },
+    {
+      "seq": 28,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ba",
+      "observed": "'move_cb' occurred (not offered here)"
+    },
+    {
+      "seq": 29,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ba",
+      "observed": "'move_ac' occurred (not offered here)"
+    },
+    {
+      "seq": 31,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_bc",
+      "observed": "'move_cb' occurred (not offered here)"
+    },
+    {
+      "seq": 32,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_bc",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 33,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_bc",
+      "observed": "'move_ab' occurred (not offered here)"
+    },
+    {
+      "seq": 34,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_bc",
+      "observed": "'move_ac' occurred (not offered here)"
+    },
+    {
+      "seq": 35,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_bc",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 36,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_bc",
+      "observed": "'move_ba' occurred (not offered here)"
+    }
+  ],
+  "completeness": {
+    "result": "full"
+  },
+  "checked_at": 1787599790.8161592
+}

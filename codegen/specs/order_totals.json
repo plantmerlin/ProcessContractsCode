@@ -1,0 +1,61 @@
+{
+ "spec": "order_totals",
+ "filename": "solution.py",
+ "prompt": "Total customer spending. `solve(orders)` takes a list of order records, each an object with keys customer, item, qty, unit_cents and status. Return an object mapping each customer to the total of qty * unit_cents over their orders, ignoring any order whose status is \"cancelled\". A customer whose orders are all cancelled does not appear in the result.",
+ "test_input": [
+  {
+   "customer": "ana",
+   "item": "pen",
+   "qty": 3,
+   "unit_cents": 150,
+   "status": "paid"
+  },
+  {
+   "customer": "ben",
+   "item": "book",
+   "qty": 1,
+   "unit_cents": 1299,
+   "status": "paid"
+  },
+  {
+   "customer": "ana",
+   "item": "paper",
+   "qty": 2,
+   "unit_cents": 499,
+   "status": "cancelled"
+  },
+  {
+   "customer": "cara",
+   "item": "pen",
+   "qty": 10,
+   "unit_cents": 150,
+   "status": "paid"
+  },
+  {
+   "customer": "ben",
+   "item": "ink",
+   "qty": 2,
+   "unit_cents": 725,
+   "status": "pending"
+  },
+  {
+   "customer": "ana",
+   "item": "book",
+   "qty": 1,
+   "unit_cents": 1299,
+   "status": "paid"
+  },
+  {
+   "customer": "dev",
+   "item": "pen",
+   "qty": 5,
+   "unit_cents": 150,
+   "status": "cancelled"
+  }
+ ],
+ "expected_output": {
+  "ana": 1749,
+  "ben": 2749,
+  "cara": 1500
+ }
+}

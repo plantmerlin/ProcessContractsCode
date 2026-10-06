@@ -1,0 +1,48 @@
+{
+  "reference_seed": "2026-09-16T142914Z_codegen_57e473a2488898277dc7d673c7910c81",
+  "artefact_id": "50bfde761acc5ece8c8e4f65a2838419f3a9e312bddb56916e3df9fffbfec178",
+  "rows": [
+    {
+      "spec": "balanced_brackets",
+      "run_id": "2026-09-16T144823Z_codegen_8bd4d1eaff1166923d06533eadb885c3",
+      "same_P": true,
+      "same_artefact_id": true
+    },
+    {
+      "spec": "binary_insertion_sort",
+      "run_id": "2026-09-16T143036Z_codegen_fc2feea58aad88225f05716ca300a218",
+      "same_P": true,
+      "same_artefact_id": true
+    },
+    {
+      "spec": "bubble_sort",
+      "run_id": "2026-09-16T142946Z_codegen_549ccdb5ee8fbe2626f40060a2c3a74c",
+      "same_P": true,
+      "same_artefact_id": true
+    },
+    {
+      "spec": "count_islands",
+      "run_id": "2026-09-16T144918Z_codegen_ae568d4c9e80fe5377af3ad051886998",
+      "same_P": true,
+      "same_artefact_id": true
+    },
+    {
+      "spec": "fizzbuzz",
+      "run_id": "2026-09-16T143135Z_codegen_06c3d7b9f8d323e3adb066783203e0cd",
+      "same_P": true,
+      "same_artefact_id": true
+    },
+    {
+      "spec": "order_totals",
+      "run_id": "2026-09-16T144958Z_codegen_295484c86a7745db13f2bb1792c044f2",
+      "same_P": true,
+      "same_artefact_id": true
+    },
+    {
+      "spec": "run_length_encoding",
+      "run_id": "2026-09-16T143250Z_codegen_f0360ca807ee665d63bb70aa5c3b3615",
+      "same_P": true,
+      "same_artefact_id": true
+    }
+  ]
+}

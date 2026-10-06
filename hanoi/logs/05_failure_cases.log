@@ -1,0 +1,15 @@
+contract ba7359ae5bf6 v1.0.0  seed 16f2
+baseline (unmutated seed): conforms
+
+case             expected         verdict     raised  classes
+structural       STRUCTURAL       violations     YES  COMPLETENESS,STRUCTURAL
+guard_pre        GUARD_PRE        violations     YES  GUARD_PRE
+guard_post       GUARD_POST       violations     YES  GUARD_POST
+completeness     COMPLETENESS     violations     YES  COMPLETENESS
+continuity       CONTINUITY       violations     YES  CONTINUITY
+schema           SCHEMA           violations     YES  GUARD_POST,SCHEMA
+ledger_mismatch  LEDGER_MISMATCH  violations     YES  LEDGER_MISMATCH
+unmediated       UNMEDIATED       violations     YES  UNMEDIATED
+hold_control     conforms (HOLD)  conforms       YES  -
+
+9/9 cases behaved as expected -> .\failure_cases

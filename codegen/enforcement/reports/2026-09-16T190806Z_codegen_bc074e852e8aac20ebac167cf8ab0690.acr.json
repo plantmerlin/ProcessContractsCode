@@ -1,0 +1,23 @@
+{
+  "acr_version": "1.0",
+  "run_id": "2026-09-16T190806Z_codegen_bc074e852e8aac20ebac167cf8ab0690",
+  "artefact_id": "50bfde761acc5ece8c8e4f65a2838419f3a9e312bddb56916e3df9fffbfec178",
+  "artefact_version": "1.0.0",
+  "verdict": "violations",
+  "trace_integrity": "pass",
+  "process_conformance": "fail",
+  "misalignments": [
+    {
+      "seq": -1,
+      "class": "COMPLETENESS",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "termination with exit guard 'verified /\\ test_passed'",
+      "observed": "process not at SKIP"
+    }
+  ],
+  "completeness": {
+    "result": "partial",
+    "reason": "exit_guard_unsatisfied"
+  },
+  "checked_at": 1791293109.1040008
+}

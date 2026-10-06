@@ -1,0 +1,84 @@
+contract 50bfde761acc content ea20f7eef09c seed 0c81
+
+run  spec                   arm         ev rej  iv test verdict     classes
+0c81 bubble_sort            undirected   5   0   0 PASS conforms     <- SEED
+42d5 bubble_sort            undirected   5   0   0 PASS conforms   
+901a bubble_sort            undirected   5   0   0 PASS conforms   
+a74c bubble_sort            undirected   5   0   0 PASS conforms   
+0cd4 binary_insertion_sort  undirected   5   0   0 PASS conforms   
+deda binary_insertion_sort  undirected   5   0   0 PASS conforms   
+4347 binary_insertion_sort  undirected   5   0   0 PASS conforms   
+a218 binary_insertion_sort  undirected   5   0   0 PASS conforms   
+f1ab fizzbuzz               undirected   5   0   0 PASS conforms   
+0d82 fizzbuzz               undirected   5   0   0 PASS conforms   
+6d9b fizzbuzz               undirected   5   0   0 PASS conforms   
+e0cd fizzbuzz               undirected   5   0   0 PASS conforms   
+297e run_length_encoding    undirected   5   0   0 PASS conforms   
+54e4 run_length_encoding    undirected   5   0   0 PASS conforms   
+984e run_length_encoding    undirected   5   0   0 PASS conforms   
+3615 run_length_encoding    undirected   5   0   0 PASS conforms   
+6467 bubble_sort            enforced     5   0   0 PASS conforms   
+ed84 bubble_sort            enforced     5   0   0 PASS conforms   
+ecbc bubble_sort            enforced     5   0   0 PASS conforms   
+a8a8 bubble_sort            enforced     5   0   0 PASS conforms   
+4eca bubble_sort            enforced     5   0   0 PASS conforms   
+0f85 binary_insertion_sort  enforced     5   0   0 PASS conforms   
+2602 binary_insertion_sort  enforced     5   0   0 PASS conforms   
+710f binary_insertion_sort  enforced     5   0   0 PASS conforms   
+0c68 binary_insertion_sort  enforced     5   0   0 PASS conforms   
+b4aa binary_insertion_sort  enforced     5   0   0 PASS conforms   
+002b fizzbuzz               enforced     5   0   0 PASS conforms   
+064f fizzbuzz               enforced     5   0   0 PASS conforms   
+f6f6 fizzbuzz               enforced     5   0   0 PASS conforms   
+07d6 fizzbuzz               enforced     5   0   0 PASS conforms   
+a073 fizzbuzz               enforced     5   0   0 PASS conforms   
+28ec run_length_encoding    enforced     5   0   0 PASS conforms   
+5364 run_length_encoding    enforced     5   0   0 PASS conforms   
+bf99 run_length_encoding    enforced     5   0   0 PASS conforms   
+51ce run_length_encoding    enforced     5   0   0 PASS conforms   
+a4a2 run_length_encoding    enforced     5   0   0 PASS conforms   
+42b3 balanced_brackets      undirected   5   0   0 PASS conforms   
+d90f balanced_brackets      undirected   5   0   0 PASS conforms   
+17c8 balanced_brackets      undirected   5   0   0 PASS conforms   
+85c3 balanced_brackets      undirected   5   0   0 PASS conforms   
+9d84 count_islands          undirected   5   0   0 PASS conforms   
+0173 count_islands          undirected   5   0   0 PASS conforms   
+a380 count_islands          undirected   5   0   0 PASS conforms   
+6998 count_islands          undirected   5   0   0 PASS conforms   
+adea order_totals           undirected   5   0   0 PASS conforms   
+5df4 order_totals           undirected   5   0   0 PASS conforms   
+b2b4 order_totals           undirected   5   0   0 PASS conforms   
+44f2 order_totals           undirected   5   0   0 PASS conforms   
+ae56 balanced_brackets      enforced     5   0   0 PASS conforms   
+c532 balanced_brackets      enforced     5   0   0 PASS conforms   
+0860 balanced_brackets      enforced     5   0   0 PASS conforms   
+54e9 balanced_brackets      enforced     5   0   0 PASS conforms   
+d777 balanced_brackets      enforced     5   0   0 PASS conforms   
+aa92 count_islands          enforced     5   0   0 PASS conforms   
+0610 count_islands          enforced     5   0   0 PASS conforms   
+6673 count_islands          enforced     5   0   0 PASS conforms   
+d16b count_islands          enforced     5   0   0 PASS conforms   
+52ad count_islands          enforced     5   0   0 PASS conforms   
+7e07 order_totals           enforced     5   0   0 PASS conforms   
+289f order_totals           enforced     5   0   0 PASS conforms   
+07ac order_totals           enforced     5   0   0 PASS conforms   
+d234 order_totals           enforced     5   0   0 PASS conforms   
+513a order_totals           enforced     5   0   0 PASS conforms   
+
+spec                   arm          n  conform  test pass&nonconf   iv
+balanced_brackets      enforced     5     5/5    5/5        0        0
+binary_insertion_sort  enforced     5     5/5    5/5        0        0
+bubble_sort            enforced     5     5/5    5/5        0        0
+count_islands          enforced     5     5/5    5/5        0        0
+fizzbuzz               enforced     5     5/5    5/5        0        0
+order_totals           enforced     5     5/5    5/5        0        0
+run_length_encoding    enforced     5     5/5    5/5        0        0
+balanced_brackets      undirected   4     4/4    4/4        0        0
+binary_insertion_sort  undirected   4     4/4    4/4        0        0
+bubble_sort            undirected   4     4/4    4/4        0        0
+count_islands          undirected   4     4/4    4/4        0        0
+fizzbuzz               undirected   4     4/4    4/4        0        0
+order_totals           undirected   4     4/4    4/4        0        0
+run_length_encoding    undirected   4     4/4    4/4        0        0
+
+63 ACRs -> cross_task\reports

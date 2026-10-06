@@ -1,0 +1,30 @@
+CODEGEN | spec=round_half_away | gpt-4o | parallel_tool_calls=False | prompt=standard | undirected
+[00] completed  ev= 4 rej= 0 iv= 0 test=fail exit=n  11.7s caa1  [create write execute verify]
+[01] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   8.4s b175  [create write execute verify report]  <- SEED CANDIDATE
+[02] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   6.9s 1a76  [create write execute verify report]  <- SEED CANDIDATE
+[03] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   7.4s 3620  [create write execute verify report]  <- SEED CANDIDATE
+[04] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   8.0s ad98  [create write execute verify report]  <- SEED CANDIDATE
+CODEGEN | spec=round_half_away | gpt-4o | parallel_tool_calls=False | prompt=standard | ENFORCED vs 50bfde761acc/ea20f7eef09c
+[00] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y  11.2s 93c9  [create write execute verify report]  <- SEED CANDIDATE
+[01] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   7.2s 30f8  [create write execute verify report]  <- SEED CANDIDATE
+[02] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   7.8s 5cda  [create write execute verify report]  <- SEED CANDIDATE
+[03] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y  14.7s 77ff  [create write execute verify report]  <- SEED CANDIDATE
+[04] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y  10.1s f30b  [create write execute verify report]  <- SEED CANDIDATE
+CODEGEN | spec=title_case_small_words | gpt-4o | parallel_tool_calls=False | prompt=standard | undirected
+[00] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y  10.5s cec5  [create write execute verify report]  <- SEED CANDIDATE
+[01] completed  ev= 8 rej= 0 iv= 0 test=PASS exit=Y  14.5s d6f0  [create write execute verify write execute verify report]  <- SEED CANDIDATE
+[02] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y  10.3s eedd  [create write execute verify report]  <- SEED CANDIDATE
+[03] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   9.9s 2dd2  [create write execute verify report]  <- SEED CANDIDATE
+[04] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   9.6s fa21  [create write execute verify report]  <- SEED CANDIDATE
+CODEGEN | spec=title_case_small_words | gpt-4o | parallel_tool_calls=False | prompt=standard | ENFORCED vs 50bfde761acc/ea20f7eef09c
+[00] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y  12.6s 143a  [create write execute verify report]  <- SEED CANDIDATE
+[01] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   7.2s 119d  [create write execute verify report]  <- SEED CANDIDATE
+[02] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y  12.3s 2729  [create write execute verify report]  <- SEED CANDIDATE
+[03] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   9.4s 9680  [create write execute verify report]  <- SEED CANDIDATE
+[04] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   7.8s 6d90  [create write execute verify report]  <- SEED CANDIDATE
+CODEGEN | spec=title_case_small_words | gpt-4o | parallel_tool_calls=False | prompt=standard | refusal=minimal | ENFORCED vs 50bfde761acc/ea20f7eef09c
+[00] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   9.8s 1c9d  [create write execute verify report]  <- SEED CANDIDATE
+[01] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   8.8s c965  [create write execute verify report]  <- SEED CANDIDATE
+[02] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   6.5s 6cde  [create write execute verify report]  <- SEED CANDIDATE
+[03] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   8.2s ee93  [create write execute verify report]  <- SEED CANDIDATE
+[04] completed  ev= 5 rej= 0 iv= 0 test=PASS exit=Y   8.9s d290  [create write execute verify report]  <- SEED CANDIDATE

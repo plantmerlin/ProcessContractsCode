@@ -1,0 +1,57 @@
+{
+  "acr_version": "1.0",
+  "run_id": "2026-08-24T191854Z_hanoi3_832066dbf0641410a8c19bd93a27753b",
+  "artefact_id": "ba7359ae5bf662128e9b5c5f36efec43480b0a9cc9eb8dc58d7f827bb6a76618",
+  "artefact_version": "1.0.0",
+  "verdict": "violations",
+  "trace_integrity": "fail",
+  "process_conformance": "fail",
+  "misalignments": [
+    {
+      "seq": 0,
+      "class": "UNMEDIATED",
+      "family": "TRACE_INTEGRITY",
+      "expected": "every executed operation classifies to a cell",
+      "observed": "'move' executed unclassified"
+    },
+    {
+      "seq": 3,
+      "class": "UNMEDIATED",
+      "family": "TRACE_INTEGRITY",
+      "expected": "every executed operation classifies to a cell",
+      "observed": "'move' executed unclassified"
+    },
+    {
+      "seq": 6,
+      "class": "UNMEDIATED",
+      "family": "TRACE_INTEGRITY",
+      "expected": "every executed operation classifies to a cell",
+      "observed": "'move' executed unclassified"
+    },
+    {
+      "seq": 0,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ac",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 3,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_cb",
+      "observed": "'move_invalid' occurred (not offered here)"
+    },
+    {
+      "seq": 6,
+      "class": "STRUCTURAL",
+      "family": "PROCESS_CONFORMANCE",
+      "expected": "one of: move_ba",
+      "observed": "'move_invalid' occurred (not offered here)"
+    }
+  ],
+  "completeness": {
+    "result": "full"
+  },
+  "checked_at": 1787599790.8046238
+}

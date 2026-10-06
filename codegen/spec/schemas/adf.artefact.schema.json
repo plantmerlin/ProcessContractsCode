@@ -1,0 +1,500 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "artefact-spec/adf.artefact.schema.json",
+ "title": "ADF v1.0 - Artefact Definition Format (the stored artefact package)",
+ "type": "object",
+ "required": [
+  "adf_version",
+  "artefact_id",
+  "name",
+  "version",
+  "created_from_run",
+  "store_schema",
+  "cell_schema",
+  "scope",
+  "alpha",
+  "semantics",
+  "P",
+  "signoff",
+  "provenance"
+ ],
+ "properties": {
+  "adf_version": {
+   "const": "1.0"
+  },
+  "artefact_id": {
+   "type": "string",
+   "pattern": "^[0-9a-f]{64}$",
+   "description": "SHA-256 of canonical JSON of (store_schema, cell_schema, scope)"
+  },
+  "name": {
+   "type": "string",
+   "pattern": "^[a-z][a-z0-9_]*$"
+  },
+  "version": {
+   "type": "string",
+   "pattern": "^\\d+\\.\\d+\\.\\d+$"
+  },
+  "created_from_run": {
+   "type": "string",
+   "description": "run_id of the seed run"
+  },
+  "store_schema": {
+   "$ref": "atf.trace.schema.json#/properties/store_schema"
+  },
+  "cell_schema": {
+   "type": "object",
+   "propertyNames": {
+    "pattern": "^[a-z][a-z0-9_]*$"
+   },
+   "additionalProperties": {
+    "type": "object",
+    "required": [
+     "type",
+     "layer",
+     "reads"
+    ],
+    "properties": {
+     "type": {
+      "enum": [
+       "request",
+       "action",
+       "check",
+       "control",
+       "report"
+      ]
+     },
+     "layer": {
+      "enum": [
+       "UI",
+       "API",
+       "SYS"
+      ]
+     },
+     "reads": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "scope": {
+   "$ref": "atf.trace.schema.json#/properties/scope"
+  },
+  "alpha": {
+   "type": "object",
+   "required": [
+    "projection_fields"
+   ],
+   "properties": {
+    "projection_fields": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "hide": {
+     "type": "string",
+     "description": "DEPRECATED. Retained for contracts written before alpha became literal projection; the verifier hides nothing."
+    },
+    "quotient": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "folded_action",
+       "source_action",
+       "count"
+      ],
+      "properties": {
+       "folded_action": {
+        "type": "string"
+       },
+       "source_action": {
+        "type": "string"
+       },
+       "count": {
+        "type": "integer"
+       }
+      }
+     }
+    },
+    "naming": {
+     "const": "span-pairing"
+    }
+   },
+   "description": "LEGACY ADF v1 field name. It is an observation/projection manifest and induction metadata, not a behavioural trace abstraction. The verifier consumes the literal recorded event sequence."
+  },
+  "P": {
+   "$ref": "#/$defs/node"
+  },
+  "external_choices": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "at",
+     "field",
+     "taken",
+     "branches"
+    ],
+    "properties": {
+     "at": {
+      "type": "string"
+     },
+     "field": {
+      "type": "string"
+     },
+     "taken": {
+      "type": "string"
+     },
+     "branches": {
+      "type": "array"
+     }
+    }
+   }
+  },
+  "internal_choices": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "at",
+     "chosen",
+     "alternatives"
+    ],
+    "properties": {
+     "at": {
+      "type": "string"
+     },
+     "chosen": {
+      "type": "string"
+     },
+     "alternatives": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "signoff": {
+   "type": "object",
+   "required": [
+    "status"
+   ],
+   "properties": {
+    "status": {
+     "enum": [
+      "draft",
+      "signed",
+      "deprecated"
+     ]
+    },
+    "by": {
+     "type": "string"
+    },
+    "date": {
+     "type": "string"
+    }
+   }
+  },
+  "provenance": {
+   "enum": [
+    "runtime_observed",
+    "sandbox_observed",
+    "dummy",
+    "declared"
+   ]
+  },
+  "task_params": {
+   "type": [
+    "object",
+    "null"
+   ]
+  },
+  "adapter_version": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "semantics": {
+   "type": "object",
+   "required": [
+    "version",
+    "hold_budget"
+   ],
+   "properties": {
+    "version": {
+     "type": "string",
+     "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "hold_budget": {
+     "type": "integer",
+     "minimum": 0,
+     "description": "Maximum consecutive HOLD transitions permitted before the next proposal of that action is refused."
+    }
+   },
+   "additionalProperties": false
+  },
+  "composition": {
+   "type": "object",
+   "description": "Provenance for a contract formed by sequential composition of existing contracts.",
+   "properties": {
+    "operator": {
+     "const": "seq"
+    },
+    "left": {
+     "type": "string"
+    },
+    "right": {
+     "type": "string"
+    },
+    "version": {
+     "type": "string",
+     "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    }
+   },
+   "required": [
+    "operator",
+    "version",
+    "left",
+    "right"
+   ],
+   "additionalProperties": false
+  }
+ },
+ "$defs": {
+  "guard": {
+   "$ref": "atf.trace.schema.json#/$defs/guard"
+  },
+  "node": {
+   "type": "object",
+   "required": [
+    "op"
+   ],
+   "oneOf": [
+    {
+     "properties": {
+      "op": {
+       "const": "skip"
+      }
+     }
+    },
+    {
+     "properties": {
+      "op": {
+       "const": "stop"
+      }
+     }
+    },
+    {
+     "properties": {
+      "op": {
+       "const": "cell"
+      },
+      "action": {
+       "type": "string"
+      },
+      "type": {
+       "enum": [
+        "request",
+        "action",
+        "check",
+        "control",
+        "report"
+       ]
+      },
+      "reads": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "pre": {
+       "$ref": "#/$defs/guard"
+      },
+      "post": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "op",
+      "action",
+      "type",
+      "pre",
+      "post"
+     ]
+    },
+    {
+     "properties": {
+      "op": {
+       "const": "seq"
+      },
+      "children": {
+       "type": "array",
+       "items": {
+        "$ref": "#/$defs/node"
+       }
+      }
+     },
+     "required": [
+      "op",
+      "children"
+     ]
+    },
+    {
+     "properties": {
+      "op": {
+       "const": "call"
+      },
+      "name": {
+       "type": "string"
+      },
+      "args": {
+       "type": "object"
+      },
+      "cells": {
+       "type": "array",
+       "items": {
+        "$ref": "#/$defs/node"
+       }
+      }
+     },
+     "required": [
+      "op",
+      "name"
+     ]
+    },
+    {
+     "properties": {
+      "op": {
+       "const": "ext"
+      },
+      "branches": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "required": [
+         "guard",
+         "node"
+        ],
+        "properties": {
+         "guard": {
+          "$ref": "#/$defs/guard"
+         },
+         "node": {
+          "$ref": "#/$defs/node"
+         }
+        }
+       }
+      }
+     },
+     "required": [
+      "op",
+      "branches"
+     ]
+    },
+    {
+     "properties": {
+      "op": {
+       "const": "int"
+      },
+      "options": {
+       "type": "array",
+       "items": {
+        "$ref": "#/$defs/node"
+       }
+      }
+     },
+     "required": [
+      "op",
+      "options"
+     ]
+    },
+    {
+     "properties": {
+      "op": {
+       "const": "par"
+      },
+      "sync": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "left": {
+       "$ref": "#/$defs/node"
+      },
+      "right": {
+       "$ref": "#/$defs/node"
+      }
+     },
+     "required": [
+      "op",
+      "sync",
+      "left",
+      "right"
+     ]
+    },
+    {
+     "properties": {
+      "op": {
+       "const": "rec"
+      },
+      "var": {
+       "type": "string"
+      },
+      "body": {
+       "$ref": "#/$defs/node"
+      }
+     },
+     "required": [
+      "op",
+      "var",
+      "body"
+     ]
+    },
+    {
+     "properties": {
+      "op": {
+       "const": "var"
+      },
+      "name": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "op",
+      "name"
+     ]
+    },
+    {
+     "properties": {
+      "op": {
+       "const": "hide"
+      },
+      "hidden": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "body": {
+       "$ref": "#/$defs/node"
+      }
+     },
+     "required": [
+      "op",
+      "hidden",
+      "body"
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,126 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "artefact-spec/acr.report.schema.json",
+ "title": "ACR v1.0 - Artefact Conformance Report (verifier output)",
+ "type": "object",
+ "required": [
+  "acr_version",
+  "run_id",
+  "artefact_id",
+  "artefact_version",
+  "verdict",
+  "trace_integrity",
+  "process_conformance",
+  "misalignments",
+  "completeness",
+  "checked_at"
+ ],
+ "properties": {
+  "acr_version": {
+   "const": "1.0"
+  },
+  "run_id": {
+   "type": "string"
+  },
+  "artefact_id": {
+   "type": "string",
+   "pattern": "^[0-9a-f]{64}$"
+  },
+  "artefact_version": {
+   "type": "string",
+   "pattern": "^\\d+\\.\\d+\\.\\d+$"
+  },
+  "verdict": {
+   "enum": [
+    "conforms",
+    "violations"
+   ]
+  },
+  "misalignments": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "seq",
+     "class",
+     "family",
+     "expected",
+     "observed"
+    ],
+    "properties": {
+     "seq": {
+      "type": "integer",
+      "minimum": -1,
+      "description": "event seq in the checked run; -1 for run-level findings"
+     },
+     "class": {
+      "enum": [
+       "STRUCTURAL",
+       "GUARD_PRE",
+       "GUARD_POST",
+       "SCHEMA",
+       "COMPLETENESS",
+       "UNMEDIATED",
+       "CONTINUITY",
+       "LEDGER_MISMATCH"
+      ]
+     },
+     "expected": {
+      "type": "string",
+      "description": "offer-set or guard that should have held, rendered in ASCII notation"
+     },
+     "observed": {
+      "type": "string",
+      "description": "the event/state actually seen, rendered in ASCII notation"
+     },
+     "detail": {
+      "type": "string"
+     },
+     "family": {
+      "enum": [
+       "TRACE_INTEGRITY",
+       "PROCESS_CONFORMANCE",
+       "IMPLEMENTATION"
+      ]
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  "completeness": {
+   "type": "object",
+   "required": [
+    "result"
+   ],
+   "properties": {
+    "result": {
+     "enum": [
+      "full",
+      "partial"
+     ]
+    },
+    "reason": {
+     "type": "string"
+    }
+   }
+  },
+  "checked_at": {
+   "type": "number"
+  },
+  "trace_integrity": {
+   "enum": [
+    "pass",
+    "fail"
+   ],
+   "description": "Preconditions for certifying that the recorded event sequence is one faithful history."
+  },
+  "process_conformance": {
+   "enum": [
+    "pass",
+    "fail"
+   ],
+   "description": "Whether the recorded execution satisfies the process contract, separate from trace-integrity findings."
+  }
+ },
+ "additionalProperties": false
+}

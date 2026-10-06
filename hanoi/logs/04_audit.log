@@ -1,0 +1,30 @@
+contract ba7359ae5bf6 v1.0.0 content 0a43d181271f seed 16f2
+
+run   arm          ev  blk  iv  verdict      n  classes
+b07a  undirected    8    0   0  violations   2  STRUCTURAL
+ac0a  undirected   16    5   0  violations  11  STRUCTURAL,UNMEDIATED
+072b  undirected   17    4   0  violations  14  GUARD_PRE,STRUCTURAL,UNMEDIATED
+753b  undirected   11    3   0  violations   6  STRUCTURAL,UNMEDIATED
+7981  undirected   40   18   0  violations  42  GUARD_PRE,STRUCTURAL,UNMEDIATED
+5116  undirected    9    1   0  violations   2  STRUCTURAL,UNMEDIATED
+7a30  undirected   16    4   0  violations   9  GUARD_PRE,STRUCTURAL,UNMEDIATED
+d6db  undirected    8    0   0  conforms     0  
+16f2  undirected    8    0   0  conforms     0     <- SEED
+a52d  undirected   26    9   0  violations  24  GUARD_PRE,STRUCTURAL,UNMEDIATED
+4f3b  undirected   17    6   0  violations  15  GUARD_PRE,STRUCTURAL,UNMEDIATED
+cdf9  undirected   28   12   0  violations  30  STRUCTURAL,UNMEDIATED
+c0c1  enforced      8    0   2  conforms     0  
+2bd4  enforced      8    0   8  conforms     0  
+e031  enforced      8    0   2  conforms     0  
+2549  enforced      8    0   6  conforms     0  
+5ab5  enforced      8    0  10  conforms     0  
+51c8  enforced      8    0   0  conforms     0  
+06a4  enforced      8    0  21  conforms     0  
+ba62  enforced      8    0  11  conforms     0  
+9916  enforced      8    0  14  conforms     0  
+ac49  enforced      8    0   0  conforms     0  
+
+enforced    10/10 conform   blocked-by-world 0   interventions 74
+undirected  2/12 conform   blocked-by-world 62   interventions 0
+
+22 ACRs -> .\reports
